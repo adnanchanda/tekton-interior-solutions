@@ -7,7 +7,7 @@ import React, { useEffect, useRef, useState } from "react";
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const scrollContainerRef = useRef(null);
+  const scrollContainerRef = useRef<HTMLDivElement | null>(null);
 
   const scrollLeft = () => {
     if (scrollContainerRef.current) {
@@ -44,9 +44,12 @@ export default function Home() {
 
   // Close mobile menu when clicking outside
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (isMenuOpen && !event.target.closest("nav")) {
-        setIsMenuOpen(false);
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+      isMenuOpen && 
+      !(event.target as HTMLElement).closest("nav")
+      ) {
+      setIsMenuOpen(false);
       }
     };
 
