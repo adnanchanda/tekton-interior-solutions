@@ -3,7 +3,12 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --accent: #f9826c;
+  --alpha: #8ca92b;
+  --beta:#b7eb3d;
 }
+
+
 
 @theme inline {
   --color-background: var(--background);
