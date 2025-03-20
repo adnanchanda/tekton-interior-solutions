@@ -77,14 +77,14 @@ export default function Home() {
     return (
       <motion.section
         id="about"
-        className="p-4 md:p-12 bg-white text-left min-h-[500px] lg:min-h-screen py-16"
+        className="p-4 md:p-12 bg-black text-left min-h-[500px] lg:min-h-screen py-16"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true }}
       >
         <motion.h2
-          className="font-seria text-3xl md:text-5xl font-bold text-left"
+          className="font-soria text-3xl md:text-5xl font-bold text-left text-white"
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
@@ -92,7 +92,7 @@ export default function Home() {
           About Us
         </motion.h2>
         <motion.div
-          className="mt-4 max-w-4xl mx-auto text-gray-700 text-left p-2 md:p-8"
+          className="mt-4 max-w-4xl mx-auto  text-left p-2 md:p-8 text-white" 
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -129,12 +129,11 @@ export default function Home() {
   };
 
   return (
-    <div className="font-sans">
+    <div className="font-sans ">
       {/* Navbar */}
-      <nav className="flex flex-wrap justify-between items-center p-4 md:p-6 bg-white sticky top-0 z-50 shadow-sm">
-        <div className="flex items-center gap-2">
+      <nav className="flex flex-wrap justify-between items-center p-4 md:p-6 bg-black sticky top-0 z-50 shadow-[0_1px_3px_0_rgba(255,255,255,0.1)]">        <div className="flex items-center gap-2 bg-black">
           <Image src="/logo.png" alt="Tekton Logo" width={50} height={50} />
-          <h1 className="text-sm md:text-xl font-bold text-[#1d1d1d]">
+          <h1 className="text-sm md:text-xl font-bold text-white">
             Tekton Interior Solutions
           </h1>
         </div>
@@ -206,16 +205,16 @@ export default function Home() {
   initial={{ opacity: 0 }}
   animate={{ opacity: 1 }}
   transition={{ duration: 1 }}
-  className="relative h-[300px] md:h-[500px] lg:h-auto bg-cover bg-center md:w-1/2 w-full"
+  className="relative h-[300px] md:h-[500px] lg:h-auto bg-cover bg-center md:w-1/2 w-full bg-black"
 >
   <motion.div 
-    className="absolute inset-0 bg-opacity-50 justify-center flex flex-col p-6 md:p-20 gap-3 md:gap-5"
+    className="absolute inset-0 bg-opacity-50 justify-center flex flex-col p-6 md:p-20 gap-3 md:gap-5 bg-b"
   >
     <motion.h1 
       variants={textRevealVariants}
       initial="hidden"
       animate="visible"
-      className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-black leading-tight"
+      className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white leading-tight"
     >
       Transform Your Workspace
     </motion.h1>
@@ -225,7 +224,7 @@ export default function Home() {
       initial="hidden"
       animate="visible"
       transition={{ delay: 0.3 }}
-      className="mt-1 text-lg md:text-2xl text-black"
+      className="mt-1 text-lg md:text-2xl text-white"
     >
       A perfect blend of elegance and comfort
     </motion.p>
@@ -234,7 +233,7 @@ export default function Home() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8, delay: 0.6 }}
-      className="mt-8"
+      className="mt-8 bg-black"
     >
       <motion.a
         whileHover={{ scale: 1.03 }}
@@ -271,7 +270,7 @@ export default function Home() {
         <motion.section
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className="md:w-1/2 w-full h-[300px] md:h-[500px] lg:h-auto grid grid-cols-3 grid-rows-3 gap-2 md:gap-4 p-2 md:p-4"
+          className="md:w-1/2 w-full h-[300px] md:h-[500px] lg:h-auto grid grid-cols-3 grid-rows-3 gap-2 md:gap-4 p-2 md:p-4 bg-black"
         >
           {[
             {
@@ -329,10 +328,10 @@ export default function Home() {
       {/* Products Section */}
       <section
         id="products"
-        className="p-4 md:p-12 text-center min-h-[500px] lg:min-h-screen py-16"
+        className="p-4 md:p-12 text-center min-h-[500px] lg:min-h-screen py-16 bg-black"
       >
-        <h2 className="text-2xl md:text-3xl font-bold">Our Products</h2>
-        <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+        <h2 className="text-2xl md:text-3xl font-bold text-white">Our Products</h2>
+        <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 bg-black">
           {[
             {
               name: "Ergonomic Chairs",
@@ -351,20 +350,20 @@ export default function Home() {
             },
           ].map((product, index) => (
             <div
-              key={index}
-              className="p-4 rounded-lg bg-white hover:shadow-md transition-shadow"
-            >
+            key={index}
+            className="p-4 rounded-lg bg-black hover:shadow-[0_4px_12px_0_rgba(140,169,43,0.3)] transition-shadow text-white"
+          >
               <div className="h-48 md:h-64 w-full">
                 <img
                   src={product.img}
                   alt={product.name}
-                  className="w-full h-full object-cover rounded-3xl"
+                  className="w-full h-full object-cover rounded-3xl tex"
                 />
               </div>
               <h3 className="mt-4 text-lg md:text-xl font-bold">
                 {product.name}
               </h3>
-              <p className="text-gray-600 text-sm md:text-base">
+              <p className="text-white text-sm md:text-base">
                 {product.desc}
               </p>
             </div>
@@ -376,8 +375,8 @@ export default function Home() {
       {aboutSection()}
 
       {/* Testimonials/Clients Section */}
-      <section id="clients" className="p-4 md:p-12 text-center relative py-16">
-        <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">
+      <section id="clients" className="p-4 md:p-12 text-center relative py-16 bg-black">
+        <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8 text-white">
           Our Clients
         </h2>
 
@@ -516,11 +515,11 @@ export default function Home() {
         }}
       >
         <div className="absolute inset-0 bg-black/30"></div>
-        <div className="relative bg-white/70 p-4 md:p-8 rounded-3xl shadow-lg max-w-xs md:max-w-sm w-full mx-4 text-center backdrop-blur-md">
-          <h2 className="text-lg md:text-xl font-bold text-gray-900">
+        <div className="relative bg-black p-4 md:p-8 rounded-3xl shadow-lg max-w-xs md:max-w-sm w-full mx-4 text-center backdrop-blur-md">
+          <h2 className="text-lg md:text-xl font-bold text-white  ">
             Best Price Guaranteed!
           </h2>
-          <p className="text-gray-700 font-semibold mb-4 text-sm md:text-base">
+          <p className="text-white font-semibold mb-4 text-sm md:text-base">
             Instant Quote with Design
           </p>
 
@@ -528,24 +527,24 @@ export default function Home() {
             <input
               type="text"
               placeholder="Name*"
-              className="w-full p-2 md:p-3 border border-gray-300 rounded-lg focus:ring focus:ring-gray-400 text-sm md:text-base"
+              className="w-full p-2 md:p-3 border border-gray-300 rounded-lg focus:ring focus:ring-gray-400 text-sm md:text-base text-white"
               required
             />
             <input
               type="tel"
               placeholder="Phone*"
-              className="w-full p-2 md:p-3 border border-gray-300 rounded-lg focus:ring focus:ring-gray-400 text-sm md:text-base"
+              className="w-full p-2 md:p-3 border border-gray-300 rounded-lg focus:ring focus:ring-gray-400 text-sm md:text-base text-white"
               required
             />
             <input
               type="email"
               placeholder="Email"
-              className="w-full p-2 md:p-3 border border-gray-300 rounded-lg focus:ring focus:ring-gray-400 text-sm md:text-base"
+              className="w-full p-2 md:p-3 border border-gray-300 rounded-lg focus:ring focus:ring-gray-400 text-sm md:text-base text-white"
             />
             <input
               type="text"
               placeholder="Location"
-              className="w-full p-2 md:p-3 border border-gray-300 rounded-lg focus:ring focus:ring-gray-400 text-sm md:text-base"
+              className="w-full p-2 md:p-3 border border-gray-300 rounded-lg focus:ring focus:ring-gray-400 text-sm md:text-base text-white"
             />
             <button
               type="submit"
