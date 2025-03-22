@@ -45,11 +45,8 @@ export default function Home() {
   // Close mobile menu when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (
-      isMenuOpen && 
-      !(event.target as HTMLElement).closest("nav")
-      ) {
-      setIsMenuOpen(false);
+      if (isMenuOpen && !(event.target as HTMLElement).closest("nav")) {
+        setIsMenuOpen(false);
       }
     };
 
@@ -59,8 +56,6 @@ export default function Home() {
     };
   }, [isMenuOpen]);
 
-
-
   const textRevealVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -68,9 +63,9 @@ export default function Home() {
       y: 0,
       transition: {
         duration: 1.2,
-        ease: "easeOut"
-      }
-    }
+        ease: "easeOut",
+      },
+    },
   };
 
   const aboutSection = () => {
@@ -92,7 +87,7 @@ export default function Home() {
           About Us
         </motion.h2>
         <motion.div
-          className="mt-4 max-w-4xl mx-auto  text-left p-2 md:p-8 text-white" 
+          className="mt-4 max-w-4xl mx-auto  text-left p-2 md:p-8 text-white"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -129,13 +124,17 @@ export default function Home() {
   };
 
   return (
-    <div className="font-sans ">
+    <div>
       {/* Navbar */}
-      <nav className="flex flex-wrap justify-between items-center p-4 md:p-6 bg-black sticky top-0 z-50 shadow-[0_1px_3px_0_rgba(255,255,255,0.1)]">        <div className="flex items-center gap-2 bg-black">
-          <Image src="/logo.png" alt="Tekton Logo" width={50} height={50} />
-          <h1 className="text-sm md:text-xl font-bold text-white">
-            Tekton Interior Solutions
-          </h1>
+      <nav className="flex flex-wrap justify-between items-center p-4 md:p-6 bg-black sticky top-0 z-50 shadow-[0_1px_3px_0_rgba(255,255,255,0.1)]">
+        {" "}
+        <div className="flex items-center gap-2 bg-black">
+          <div className="flex items-center gap-4 bg-black">
+            <Image src="/logo.png" alt="Tekton Logo" width={50} height={50} />
+            <h1 className="text-sm md:text-xl font-bold text-white pl-2">
+              Tekton Interior Solutions
+            </h1>
+          </div>
         </div>
         {/* Mobile Menu Button */}
         <button
@@ -159,7 +158,6 @@ export default function Home() {
             />
           </svg>
         </button>
-
         {/* Navigation Links */}
         <div
           className={`w-full md:w-auto md:flex transition-all duration-300 ${
@@ -201,71 +199,69 @@ export default function Home() {
 
       {/* Hero Section */}
       <div className="flex flex-col md:flex-row min-h-[600px] lg:h-screen">
-<motion.header 
-  initial={{ opacity: 0 }}
-  animate={{ opacity: 1 }}
-  transition={{ duration: 1 }}
-  className="relative h-[300px] md:h-[500px] lg:h-auto bg-cover bg-center md:w-1/2 w-full bg-black"
->
-  <motion.div 
-    className="absolute inset-0 bg-opacity-50 justify-center flex flex-col p-6 md:p-20 gap-3 md:gap-5 bg-b"
-  >
-    <motion.h1 
-      variants={textRevealVariants}
-      initial="hidden"
-      animate="visible"
-      className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white leading-tight"
-    >
-      Transform Your Workspace
-    </motion.h1>
-    
-    <motion.p 
-      variants={textRevealVariants}
-      initial="hidden"
-      animate="visible"
-      transition={{ delay: 0.3 }}
-      className="mt-1 text-lg md:text-2xl text-white"
-    >
-      A perfect blend of elegance and comfort
-    </motion.p>
-    
-    <motion.div 
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.8, delay: 0.6 }}
-      className="mt-8 bg-black"
-    >
-      <motion.a
-        whileHover={{ scale: 1.03 }}
-        whileTap={{ scale: 0.98 }}
-        transition={{ duration: 0.2 }}
-        href="/documents/TektonCatalog.pdf"
-        download="TektonCatalog.pdf"
-        className="inline-flex items-center px-4 md:px-6 py-2 md:py-3 bg-[#8ca92b] hover:bg-[#b7eb3d] text-white rounded-xl transition-colors duration-200 shadow-md text-sm md:text-base"
-        onClick={(e) => {
-          if (!window.confirm("Download product catalog?")) {
-            e.preventDefault();
-          }
-        }}
-      >
-         <svg
-              className="w-4 h-4 md:w-5 md:h-5 mr-2"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
+        <motion.header
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          className="relative h-[300px] md:h-[500px] lg:h-auto bg-cover bg-center md:w-1/2 w-full bg-black"
+        >
+          <motion.div className="absolute inset-0 bg-opacity-50 justify-center flex flex-col p-6 md:p-20 gap-3 md:gap-5 bg-b">
+            <motion.h1
+              variants={textRevealVariants}
+              initial="hidden"
+              animate="visible"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white leading-tight"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-              />
-            </svg>
-         Download Product Catalog
-      </motion.a>
-    </motion.div>
-  </motion.div>
-</motion.header>
+              Transform Your Workspace
+            </motion.h1>
+
+            <motion.p
+              variants={textRevealVariants}
+              initial="hidden"
+              animate="visible"
+              transition={{ delay: 0.3 }}
+              className="mt-1 text-lg md:text-2xl text-white"
+            >
+              A perfect blend of elegance and comfort
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="mt-8 bg-black"
+            >
+              <motion.a
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.98 }}
+                transition={{ duration: 0.2 }}
+                href="/documents/TektonCatalog.pdf"
+                download="TektonCatalog.pdf"
+                className="inline-flex items-center px-4 md:px-6 py-2 md:py-3 bg-[#8ca92b] hover:bg-[#b7eb3d] text-white rounded-xl transition-colors duration-200 shadow-md text-sm md:text-base"
+                onClick={(e) => {
+                  if (!window.confirm("Download product catalog?")) {
+                    e.preventDefault();
+                  }
+                }}
+              >
+                <svg
+                  className="w-4 h-4 md:w-5 md:h-5 mr-2"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                  />
+                </svg>
+                Download Product Catalog
+              </motion.a>
+            </motion.div>
+          </motion.div>
+        </motion.header>
 
         <motion.section
           initial={{ opacity: 0 }}
@@ -330,7 +326,9 @@ export default function Home() {
         id="products"
         className="p-4 md:p-12 text-center min-h-[500px] lg:min-h-screen py-16 bg-black"
       >
-        <h2 className="text-2xl md:text-3xl font-bold text-white">Our Products</h2>
+        <h2 className="text-2xl md:text-3xl font-bold text-white">
+          Our Products
+        </h2>
         <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 bg-black">
           {[
             {
@@ -350,9 +348,9 @@ export default function Home() {
             },
           ].map((product, index) => (
             <div
-            key={index}
-            className="p-4 rounded-lg bg-black hover:shadow-[0_4px_12px_0_rgba(140,169,43,0.3)] transition-shadow text-white"
-          >
+              key={index}
+              className="p-4 rounded-lg bg-black hover:shadow-[0_4px_12px_0_rgba(140,169,43,0.3)] transition-shadow text-white"
+            >
               <div className="h-48 md:h-64 w-full">
                 <img
                   src={product.img}
@@ -363,9 +361,7 @@ export default function Home() {
               <h3 className="mt-4 text-lg md:text-xl font-bold">
                 {product.name}
               </h3>
-              <p className="text-white text-sm md:text-base">
-                {product.desc}
-              </p>
+              <p className="text-white text-sm md:text-base">{product.desc}</p>
             </div>
           ))}
         </div>
@@ -375,7 +371,10 @@ export default function Home() {
       {aboutSection()}
 
       {/* Testimonials/Clients Section */}
-      <section id="clients" className="p-4 md:p-12 text-center relative py-16 bg-black">
+      <section
+        id="clients"
+        className="p-4 md:p-12 text-center relative py-16 bg-black"
+      >
         <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8 text-white">
           Our Clients
         </h2>
