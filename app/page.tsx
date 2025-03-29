@@ -144,7 +144,7 @@ export default function Home() {
     emailjs
       .sendForm(
         "service_kg85zgf",   
-        "template_29gy0pj",     
+        "template_9qhyf5n",     
         form.current!,
         "fV4WHwbYECoh0ynzd"
       )
