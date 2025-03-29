@@ -149,7 +149,7 @@ export default function Home() {
         "fV4WHwbYECoh0ynzd"
       )
       .then(
-        (result: emailjs.EmailJSResponseStatus) => {
+        (result) => {
           console.log("Email sent successfully:", result.text);
           setMessage("Email sent successfully!");
           if (form.current) {
