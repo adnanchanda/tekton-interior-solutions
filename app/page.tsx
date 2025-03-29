@@ -127,7 +127,18 @@ export default function Home() {
     );
   };
 
-  const sendEmail = (e) => {
+  interface EmailFormElements extends HTMLFormControlsCollection {
+    name: HTMLInputElement;
+    phone: HTMLInputElement;
+    email: HTMLInputElement;
+    location: HTMLInputElement;
+  }
+
+  interface EmailForm extends HTMLFormElement {
+    elements: EmailFormElements;
+  }
+
+  const sendEmail = (e: React.FormEvent<EmailForm>) => {
     e.preventDefault();
 
     emailjs
@@ -136,17 +147,16 @@ export default function Home() {
         "template_29gy0pj",     
         form.current!,
         "fV4WHwbYECoh0ynzd"
-
       )
       .then(
-        (result) => {
+        (result: emailjs.EmailJSResponseStatus) => {
           console.log("Email sent successfully:", result.text);
           setMessage("Email sent successfully!");
           if (form.current) {
             form.current.reset();
           }
         },
-        (error) => {
+        (error: { text: string }) => {
           console.error("Error sending email:", error.text);
           setMessage("Failed to send email.");
         }
