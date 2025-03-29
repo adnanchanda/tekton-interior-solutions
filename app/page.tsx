@@ -2,12 +2,16 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
+
 
 import React, { useEffect, useRef, useState } from "react";
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const scrollContainerRef = useRef<HTMLDivElement | null>(null);
+  const form = useRef<HTMLFormElement | null>(null);
+  const [message, setMessage] = useState("");
 
   const scrollLeft = () => {
     if (scrollContainerRef.current) {
@@ -121,6 +125,32 @@ export default function Home() {
         </motion.div>
       </motion.section>
     );
+  };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_kg85zgf",   
+        "template_29gy0pj",     
+        form.current!,
+        "fV4WHwbYECoh0ynzd"
+
+      )
+      .then(
+        (result) => {
+          console.log("Email sent successfully:", result.text);
+          setMessage("Email sent successfully!");
+          if (form.current) {
+            form.current.reset();
+          }
+        },
+        (error) => {
+          console.error("Error sending email:", error.text);
+          setMessage("Failed to send email.");
+        }
+      );
   };
 
   return (
@@ -522,36 +552,42 @@ export default function Home() {
             Instant Quote with Design
           </p>
 
-          <form className="space-y-4 md:space-y-6">
-            <input
-              type="text"
-              placeholder="Name*"
-              className="w-full p-2 md:p-3 border border-gray-300 rounded-lg focus:ring focus:ring-gray-400 text-sm md:text-base text-white"
-              required
-            />
-            <input
-              type="tel"
-              placeholder="Phone*"
-              className="w-full p-2 md:p-3 border border-gray-300 rounded-lg focus:ring focus:ring-gray-400 text-sm md:text-base text-white"
-              required
-            />
-            <input
-              type="email"
-              placeholder="Email"
-              className="w-full p-2 md:p-3 border border-gray-300 rounded-lg focus:ring focus:ring-gray-400 text-sm md:text-base text-white"
-            />
-            <input
-              type="text"
-              placeholder="Location"
-              className="w-full p-2 md:p-3 border border-gray-300 rounded-lg focus:ring focus:ring-gray-400 text-sm md:text-base text-white"
-            />
-            <button
-              type="submit"
-              className="w-full bg-gray-900 text-white py-2 md:py-3 rounded-2xl text-base md:text-lg font-semibold hover:bg-gray-800 transition-colors"
-            >
-              REQUEST A CALL BACK!
-            </button>
-          </form>
+          <form ref={form} onSubmit={sendEmail} className="space-y-4 md:space-y-6">
+      <input
+        type="text"
+        name="name"
+        placeholder="Name*"
+        className="w-full p-2 md:p-3 border border-gray-300 rounded-lg focus:ring focus:ring-gray-400 text-sm md:text-base text-white"
+        required
+      />
+      <input
+        type="tel"
+        name="phone"
+        placeholder="Phone*"
+        className="w-full p-2 md:p-3 border border-gray-300 rounded-lg focus:ring focus:ring-gray-400 text-sm md:text-base text-white"
+        required
+      />
+      <input
+        type="email"
+        name="email"
+        placeholder="Email"
+        className="w-full p-2 md:p-3 border border-gray-300 rounded-lg focus:ring focus:ring-gray-400 text-sm md:text-base text-white"
+      />
+      <input
+        type="text"
+        name="location"
+        placeholder="Location"
+        className="w-full p-2 md:p-3 border border-gray-300 rounded-lg focus:ring focus:ring-gray-400 text-sm md:text-base text-white"
+      />
+      <button
+        type="submit"
+        className="w-full bg-gray-900 text-white py-2 md:py-3 rounded-2xl text-base md:text-lg font-semibold hover:bg-gray-800 transition-colors"
+      >
+        REQUEST A CALL BACK!
+      </button>
+
+      {message && <p className="text-green-500 mt-2">{message}</p>}
+    </form>
         </div>
       </div>
 
