@@ -167,7 +167,7 @@ export default function Home() {
   return (
     <div>
       <Script
-        src="https://www.googletagmanager.com/gtag/js?id=G-W05PN1FTJW"
+        src="https://www.googletagmanager.com/gtag/js?id=G-QHBQGXNWR8"
         strategy="afterInteractive"
       />
       <Script id="google-analytics" strategy="afterInteractive">
@@ -175,7 +175,7 @@ export default function Home() {
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'G-W05PN1FTJW');
+          gtag('config', 'G-QHBQGXNWR8');
         `}
       </Script>
       {/* Navbar */}
