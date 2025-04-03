@@ -6,6 +6,7 @@ import emailjs from "@emailjs/browser";
 
 
 import React, { useEffect, useRef, useState } from "react";
+import Script from "next/script";
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -165,6 +166,18 @@ export default function Home() {
 
   return (
     <div>
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-W05PN1FTJW"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-W05PN1FTJW');
+        `}
+      </Script>
       {/* Navbar */}
       <nav className="flex flex-wrap justify-between items-center p-4 md:p-6 bg-black sticky top-0 z-50 shadow-[0_1px_3px_0_rgba(255,255,255,0.1)]">
         {" "}
