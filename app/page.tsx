@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
+import Head from "next/head";
 
 
 import React, { useEffect, useRef, useState } from "react";
@@ -152,7 +153,7 @@ export default function Home() {
       .then(
         (result) => {
           console.log("Email sent successfully:", result.text);
-          setMessage("Email sent successfully!");
+          setMessage("We Will Contact You Soon!");
           if (form.current) {
             form.current.reset();
           }
@@ -165,7 +166,12 @@ export default function Home() {
   };
 
   return (
+    
     <div>
+       <Head>
+        <title>Tekton Interior Solutions</title>
+        <link rel="icon" href="/logo.png" />
+      </Head>
       <Script
         src="https://www.googletagmanager.com/gtag/js?id=G-QHBQGXNWR8"
         strategy="afterInteractive"
