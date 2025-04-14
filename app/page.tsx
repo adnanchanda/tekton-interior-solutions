@@ -639,7 +639,7 @@ export default function Home() {
             Near CNG Pump, Yewlewadi, Pune - 411048
           </p>
           <p className="m-1 md:m-2 text-sm md:text-base">
-            Email: irfanchand0a@gmail.com
+            Email: irfanchand0@gmail.com
           </p>
           <p className="m-1 md:m-2 text-sm md:text-base">
             Phone: +91 7385036389
