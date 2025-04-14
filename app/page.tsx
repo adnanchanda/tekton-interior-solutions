@@ -108,7 +108,7 @@ export default function Home() {
         >
           {[
             "Tekton Interior solutions exists in the Furniture industry since May 2017 with a huge factory outlet having modern and world-class machine setup. The location of the company is very near and reachable to city area and well-connected roads to the major cities in Maharashtra.",
-            "We have a vast customer base for Office Furniture as well as Residential Furniture. Factory Address:- Opp. Sinhgad college Behind Ganraj Marble, Kondhwa Annexe, Yewlewadi, Pune-48",
+            "We have a vast customer base for Office Furniture as well as Residential Furniture. Factory Address:-  6/1b/1, Kamte Fabrication, Opposite Sinhgad College, Near CNG Pump, Yewlewadi, Pune",
             "We are leading manufacturers of seating system chairs, Office chair, visitor chairs, and Sofas in a very short span of time. We have achieved our place in this industry. After a huge success, we have moved to Modular furniture of Office Workstation, Executive Table, Reception Table, Conference Table, Pantry Table, and Desking systems, etc.",
             "In short, we are a ONE-stop shop for all your requirements to set up a new Office / Workstation.",
           ].map((text, index) => (
