@@ -48,7 +48,7 @@ export default function ClientsCarousel() {
 
         {/* Infinite Scrolling Carousel */}
         <div className="relative">
-          <div className="flex space-x-8 animate-scroll">
+          <div className="flex space-x-8 animate-scroll md:animate-scroll overflow-x-auto md:overflow-x-visible scrollbar-hide">
             {duplicatedClients.map((client, index) => (
               <motion.div
                 key={`${client.name}-${index}`}
@@ -64,7 +64,7 @@ export default function ClientsCarousel() {
                       src={client.logo}
                       alt={`${client.name} logo`}
                       fill
-                      className="object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300 group-hover:scale-110"
+                      className="object-contain transition-all duration-300 group-hover:scale-110"
                       sizes="200px"
                     />
                   </div>
@@ -73,9 +73,9 @@ export default function ClientsCarousel() {
             ))}
           </div>
 
-          {/* Gradient Overlays */}
-          <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-white to-transparent z-10" />
-          <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-white to-transparent z-10" />
+          {/* Gradient Overlays - Hidden on mobile for scrolling */}
+          <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-white to-transparent z-10 hidden md:block" />
+          <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-white to-transparent z-10 hidden md:block" />
         </div>
 
         {/* Stats */}
@@ -119,6 +119,22 @@ export default function ClientsCarousel() {
         
         .animate-scroll:hover {
           animation-play-state: paused;
+        }
+        
+        @media (max-width: 768px) {
+          .animate-scroll {
+            animation: none;
+            scroll-behavior: smooth;
+          }
+        }
+        
+        .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+        
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;
         }
       `}</style>
     </section>
