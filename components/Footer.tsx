@@ -34,10 +34,7 @@ const footerLinks = {
 };
 
 const socialLinks = [
-  { name: "Facebook", icon: Facebook, href: "#" },
-  { name: "Twitter", icon: Twitter, href: "#" },
-  { name: "Instagram", icon: Instagram, href: "#" },
-  { name: "LinkedIn", icon: Linkedin, href: "#" },
+  { name: "Instagram", icon: Instagram, href: "https://www.instagram.com/tektoninteriorsolutions.in/" },
 ];
 
 export default function Footer() {
