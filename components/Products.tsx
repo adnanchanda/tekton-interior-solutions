@@ -136,12 +136,12 @@ export default function Products() {
                     ))}
                   </div>
 
-                  <Button
+                  {/* <Button
                     variant="outline"
                     className="w-full border-[#8ca92b] text-[#8ca92b] hover:bg-[#8ca92b] hover:text-white transition-all duration-300"
                   >
                     View Details
-                  </Button>
+                  </Button> */}
                 </CardContent>
               </Card>
             </motion.div>

@@ -162,16 +162,16 @@ export default function HeroSection() {
                   </div>
                 </Button>
                 
-                <Button
+                {/* <Button
                   variant="outline"
                   size="lg"
                   className="group border-2 border-[#8ca92b] text-[#8ca92b] hover:bg-[#8ca92b] hover:text-white transition-all duration-300 text-base px-8 py-6"
-                >
-                  <div className="flex items-center space-x-2">
+                > */}
+                  {/* <div className="flex items-center space-x-2">
                     <span className="font-semibold">Explore Products</span>
                     <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-                  </div>
-                </Button>
+                  </div> */}
+                {/* </Button> */}
               </motion.div>
 
               {/* Stats */}
