@@ -177,6 +177,230 @@ export const areas: Area[] = [
       },
     ],
   },
+  {
+    slug: "kondhwa",
+    name: "Kondhwa",
+    title: "Furniture Manufacturer in Kondhwa, Pune",
+    metaDescription:
+      "Tekton Interior Solutions makes office and home furniture at its own factory in Kondhwa Budruk, Pune: workstations, chairs, wardrobes, kitchens and beds, made to measure.",
+    answer:
+      "Tekton Interior Solutions is a furniture manufacturer in Kondhwa, Pune. Its factory is at Plot 101, near D-Mart, Somji, Kondhwa Budruk, where it makes office workstations, chairs, tables and storage, and wardrobes, kitchens and beds for homes.",
+    context:
+      "Kondhwa covers Kondhwa Khurd and Kondhwa Budruk in south-east Pune. It is mostly housing societies, with schools, clinics, shops and small offices along the main roads. Tekton's factory is here, so Kondhwa buyers can see their furniture being made.",
+    typical: ["modular-wardrobes", "modular-kitchens", "office-tables", "office-chairs"],
+    advice: [
+      {
+        heading: "See the material before you choose",
+        body: "Because the factory is in Kondhwa Budruk, you can look at board samples, laminate shades and hardware in person before you fix anything. Call ahead and bring your room measurements, so the visit ends with a clear list for the quote.",
+      },
+      {
+        heading: "For a clinic, shop or small office",
+        body: "Small commercial spaces need every centimetre to work. Give the exact wall-to-wall sizes and mark the doors, windows and plug points. A reception table, storage wall and two or three desks can then be made to fit the room exactly.",
+      },
+    ],
+    faqs: [
+      {
+        q: "Is there a furniture manufacturer in Kondhwa, Pune?",
+        a: "Yes. Tekton Interior Solutions has its factory at Plot 101, near D-Mart, Somji, Kondhwa Budruk, Pune 411048. It makes office furniture and residential furniture to order.",
+      },
+      {
+        q: "Can I visit the Tekton factory in Kondhwa?",
+        a: "Yes, by appointment during working hours, Monday to Saturday, 9:00 AM to 7:00 PM. Call +91 7385036389 to fix a time.",
+      },
+    ],
+  },
+  {
+    slug: "nibm-road",
+    name: "NIBM Road and Undri",
+    title: "Modular Wardrobes and Kitchens for NIBM Road and Undri, Pune",
+    metaDescription:
+      "Made-to-measure modular wardrobes, kitchens and beds for apartments on NIBM Road, Undri and Mohammedwadi, made nearby in Kondhwa Budruk by Tekton Interior Solutions.",
+    answer:
+      "Tekton Interior Solutions makes modular wardrobes, kitchens and beds for homes on NIBM Road, Undri and Mohammedwadi. The furniture is made to measure at its factory in neighbouring Kondhwa Budruk and installed by its own team.",
+    context:
+      "NIBM Road takes its name from the National Institute of Bank Management and runs through one of south Pune's main residential belts, continuing into Undri and Mohammedwadi. Most buyers here are fitting out apartments in gated societies, often before moving in.",
+    typical: ["modular-wardrobes", "modular-kitchens", "beds-and-bedroom-furniture", "office-tables"],
+    advice: [
+      {
+        heading: "Decide the kitchen before the electrician finishes",
+        body: "A modular kitchen fixes where the hob, chimney, fridge, oven and water purifier go, and each needs a plug point in the right place. Plan the kitchen layout first and give the electrician the point positions, so nothing has to be chased into finished walls later.",
+      },
+      {
+        heading: "Furnish a whole flat in one order",
+        body: "When wardrobes, the kitchen, beds and a study table are ordered together, the laminates and handles can be matched across rooms and everything is installed in one visit instead of several.",
+      },
+    ],
+    faqs: [
+      {
+        q: "Who makes modular wardrobes and kitchens near NIBM Road and Undri?",
+        a: "Tekton Interior Solutions makes modular wardrobes and kitchens to measure at its factory in Kondhwa Budruk, which adjoins NIBM Road, and installs them in homes across NIBM, Undri and Mohammedwadi.",
+      },
+      {
+        q: "Do you also make a home office or study table?",
+        a: "Yes. Tekton makes office tables and storage as well as home furniture, so a study table or home-office desk can be made in the same laminate as your wardrobes.",
+      },
+    ],
+  },
+  {
+    slug: "wakad",
+    name: "Wakad",
+    title: "Home and Office Furniture Maker for Wakad, Pune",
+    metaDescription:
+      "Modular wardrobes, kitchens and beds for Wakad apartments, and workstations and chairs for small offices, made in Pune by Tekton Interior Solutions and installed on site.",
+    answer:
+      "Tekton Interior Solutions makes furniture in Pune for homes and offices in Wakad: made-to-measure wardrobes, kitchens and beds for apartments, and workstations, chairs and tables for small offices and co-working floors.",
+    context:
+      "Wakad sits next to Hinjewadi on the Pimpri-Chinchwad side of the Mumbai-Bengaluru highway. It has grown into a dense area of apartment towers, many occupied by people who work in the IT park, with small offices and co-working spaces along the main roads.",
+    typical: ["modular-wardrobes", "modular-kitchens", "beds-and-bedroom-furniture", "modular-office-workstations"],
+    advice: [
+      {
+        heading: "Make small bedrooms work harder",
+        body: "In a compact bedroom, a full-height wardrobe with a loft and a bed with storage underneath usually removes the need for any other cupboard. Sliding shutters save the swing space that hinged doors need in front of the wardrobe.",
+      },
+      {
+        heading: "For a rented flat",
+        body: "If you may move in a few years, ask for wardrobes built as separate modules rather than one fixed unit. Modules can be taken apart, moved and refitted in the next home with small changes.",
+      },
+    ],
+    faqs: [
+      {
+        q: "Do you deliver and install furniture in Wakad?",
+        a: "Yes. Tekton Interior Solutions delivers and installs across Pune and Pimpri-Chinchwad, including Wakad, from its factory in Kondhwa Budruk.",
+      },
+      {
+        q: "Can a modular wardrobe be moved to another flat later?",
+        a: "Yes, if it is built as separate modules. Tell us at the quote stage that you may shift, so the wardrobe is designed to be dismantled and refitted.",
+      },
+    ],
+  },
+  {
+    slug: "pimpri-chinchwad",
+    name: "Pimpri-Chinchwad",
+    title: "Office Furniture Manufacturer for Pimpri-Chinchwad",
+    metaDescription:
+      "Office workstations, chairs, tables, storage and canteen furniture for factories and offices in Pimpri, Chinchwad and Bhosari, made in Pune by Tekton Interior Solutions.",
+    answer:
+      "Tekton Interior Solutions supplies and installs office furniture across Pimpri-Chinchwad: workstations, chairs, tables and storage for plant offices and company offices, and canteen furniture for staff cafeterias. It is made at Tekton's own factory in Pune.",
+    context:
+      "Pimpri-Chinchwad is Pune's industrial twin city, with the MIDC estates at Pimpri, Chinchwad and Bhosari and many automobile and engineering companies. Furniture buyers here are usually plant administration and purchase teams fitting out offices, training rooms and canteens.",
+    typical: ["modular-office-workstations", "office-storage", "cafeteria-furniture", "office-chairs"],
+    advice: [
+      {
+        heading: "Write the specification into the purchase order",
+        body: "Company purchase teams compare several vendors. Put the board type and thickness, laminate, edge band thickness and hardware brand in the enquiry itself, so every quote you receive is for the same thing.",
+      },
+      {
+        heading: "Furniture for a canteen that runs in shifts",
+        body: "A plant canteen is used by every shift and cleaned several times a day. Ask for metal frames, laminate or compact tops with sealed edges, and seating that can be wiped down and moved for floor cleaning.",
+      },
+    ],
+    faqs: [
+      {
+        q: "Who supplies office furniture to companies in Pimpri-Chinchwad?",
+        a: "Tekton Interior Solutions is a Pune manufacturer that makes office workstations, chairs, tables, storage and canteen furniture and installs them at offices and plants across Pimpri-Chinchwad.",
+      },
+      {
+        q: "Can you quote against our company's specification?",
+        a: "Yes. Send the specification or bill of quantities and the layout. Because Tekton makes the furniture itself, the quote follows your sizes, boards and finishes.",
+      },
+    ],
+  },
+  {
+    slug: "viman-nagar",
+    name: "Viman Nagar",
+    title: "Office and Home Furniture Maker for Viman Nagar, Pune",
+    metaDescription:
+      "Workstations, chairs and reception furniture for offices in Viman Nagar, and modular wardrobes and kitchens for apartments, made in Pune by Tekton Interior Solutions.",
+    answer:
+      "Tekton Interior Solutions makes furniture in Pune for offices and homes in Viman Nagar: workstations, chairs, reception and meeting-room furniture for commercial offices, and made-to-measure wardrobes and kitchens for apartments.",
+    context:
+      "Viman Nagar lies beside Pune airport on the Nagar Road side of the city. It has IT and commercial office buildings, co-working floors, hotels and a large student and young-professional population, alongside established apartment societies.",
+    typical: ["modular-office-workstations", "reception-lounge-sofas", "office-tables", "modular-wardrobes"],
+    advice: [
+      {
+        heading: "Get the reception right first",
+        body: "In a commercial building, the reception is what a visitor judges the office by. A reception table made to the width of the wall, with a place for the visitor register and cables hidden inside, and a matching sofa, does more than an expensive table that does not fit.",
+      },
+      {
+        heading: "Fitting out a small office floor",
+        body: "For 10 to 40 seats, share the floor plan with columns and windows marked. Linear bench workstations along the window side with a meeting table and storage on the core side usually seat the most people comfortably.",
+      },
+    ],
+    faqs: [
+      {
+        q: "Do you make office furniture for Viman Nagar?",
+        a: "Yes. Tekton Interior Solutions makes workstations, chairs, tables, storage and reception furniture in Pune and installs them in offices across the city, including Viman Nagar.",
+      },
+      {
+        q: "Can you furnish a co-working space?",
+        a: "Yes. Send the floor plan and the seat count you are aiming for. Bench workstations, cabin tables, meeting tables, lounge seating and storage are all made to the plan.",
+      },
+    ],
+  },
+  {
+    slug: "kalyani-nagar",
+    name: "Kalyani Nagar",
+    title: "Made-to-Measure Furniture for Kalyani Nagar, Pune",
+    metaDescription:
+      "Modular wardrobes, kitchens and beds for Kalyani Nagar homes, and executive tables, conference tables and reception furniture for its offices, made in Pune by Tekton.",
+    answer:
+      "Tekton Interior Solutions makes made-to-measure furniture for Kalyani Nagar: modular wardrobes, kitchens and beds for apartments and bungalows, and executive tables, conference tables and reception furniture for its commercial offices.",
+    context:
+      "Kalyani Nagar sits between Koregaon Park and Viman Nagar along the river. It is an established residential area of apartments and bungalows with commercial office buildings on its main roads, and many homes here are being renovated rather than furnished for the first time.",
+    typical: ["modular-wardrobes", "modular-kitchens", "office-tables", "reception-lounge-sofas"],
+    advice: [
+      {
+        heading: "Replacing furniture in an older home",
+        body: "In a renovation, walls are rarely square and old wardrobes often hide uneven plaster or pipes. Have the space measured after the old furniture is removed, so the new wardrobe or kitchen is made to the wall as it actually is.",
+      },
+      {
+        heading: "For a director's cabin or boardroom",
+        body: "Decide the table size from the room, not the other way round. Leave at least a metre behind each chair for people to pass, and ask for wire boxes in the table top so laptops and screens can be plugged in without cables across the floor.",
+      },
+    ],
+    faqs: [
+      {
+        q: "Do you make custom furniture for homes in Kalyani Nagar?",
+        a: "Yes. Tekton Interior Solutions makes wardrobes, kitchens and beds to measure at its Pune factory and installs them in homes across the city, including Kalyani Nagar.",
+      },
+      {
+        q: "Can you make a conference table to a specific size?",
+        a: "Yes. Conference tables are made to the size of your room and the number of seats you need, with wire boxes for power and data where you want them.",
+      },
+    ],
+  },
+  {
+    slug: "wagholi",
+    name: "Wagholi",
+    title: "Modular Home Furniture Maker for Wagholi, Pune",
+    metaDescription:
+      "Modular wardrobes, kitchens and beds for new flats in Wagholi, and office furniture for nearby offices and institutes, made in Pune by Tekton Interior Solutions.",
+    answer:
+      "Tekton Interior Solutions makes modular wardrobes, kitchens and beds for new homes in Wagholi, and office and institutional furniture for the offices, warehouses and colleges around it. Everything is made to measure at Tekton's factory in Pune.",
+    context:
+      "Wagholi is on Nagar Road beyond Kharadi and is one of Pune's fastest-growing housing areas, with many new apartment projects. Buyers are often furnishing a first home on a fixed budget, and the area also has warehouses, schools and colleges.",
+    typical: ["modular-wardrobes", "modular-kitchens", "beds-and-bedroom-furniture", "office-storage"],
+    advice: [
+      {
+        heading: "Furnish a first home in stages",
+        body: "If the budget is fixed, do the kitchen and the main bedroom wardrobe first, because you need them from the first day. Keep the laminate codes on record so the second bedroom and other pieces can be added later in a matching finish.",
+      },
+      {
+        heading: "Spend on the parts that wear",
+        body: "Hinges, drawer channels and edge banding take the daily wear in a wardrobe or kitchen. It is better to choose a simpler laminate and keep good hardware than the other way round.",
+      },
+    ],
+    faqs: [
+      {
+        q: "Do you deliver and install furniture in Wagholi?",
+        a: "Yes. Tekton Interior Solutions delivers and installs across Pune, including Wagholi, from its factory in Kondhwa Budruk.",
+      },
+      {
+        q: "Can I order only a kitchen now and wardrobes later?",
+        a: "Yes. Furniture is made to order, so you can order in stages. The laminate shade codes are kept on record so later pieces match.",
+      },
+    ],
+  },
 ];
 
 export const getArea = (slug: string) => areas.find((a) => a.slug === slug);

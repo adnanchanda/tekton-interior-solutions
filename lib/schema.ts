@@ -112,4 +112,18 @@ export const serviceSchema = (o: { name: string; description: string; path: stri
   areaServed: { "@type": "Place", name: o.area ?? "Pune, Maharashtra, India" },
 });
 
+export const articleSchema = (o: { title: string; description: string; path: string; updated: string }) => ({
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: o.title,
+  description: o.description,
+  url: abs(o.path),
+  mainEntityOfPage: abs(o.path),
+  dateModified: o.updated,
+  datePublished: o.updated,
+  inLanguage: "en-IN",
+  author: { "@id": businessId },
+  publisher: { "@id": businessId },
+});
+
 export const clientNames = clients.map((c) => c.name);

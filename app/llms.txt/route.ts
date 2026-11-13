@@ -1,7 +1,9 @@
 import { areas } from "@/lib/areas";
 import { allFaqs } from "@/lib/faqs";
+import { guides } from "@/lib/guides";
 import { products } from "@/lib/products";
 import { clients, formatAddress, site } from "@/lib/site";
+import { trade } from "@/lib/trade";
 
 export const dynamic = "force-static";
 
@@ -30,11 +32,20 @@ ${products.map((p) => `- [${p.name}](${site.url}/products/${p.slug}): ${p.answer
 ## Areas served
 ${areas.map((a) => `- [${a.name}](${site.url}/areas/${a.slug}): ${a.answer}`).join("\n")}
 
+## Buying guides
+${guides.map((g) => `- [${g.name}](${site.url}/guides/${g.slug}): ${g.answer}`).join("\n")}
+
+## For architects and interior designers
+${trade.answer}
+- Page: ${site.url}${trade.path}
+${trade.faqs.map((f) => `### ${f.q}\n${f.a}`).join("\n\n")}
+
 ## Questions and answers
 ${allFaqs.map((f) => `### ${f.q}\n${f.a}`).join("\n\n")}
 
 ## More
 - [All products](${site.url}/products)
+- [Guides](${site.url}/guides)
 - [FAQ](${site.url}/faq)
 - [About](${site.url}/about)
 - [Contact](${site.url}/contact)

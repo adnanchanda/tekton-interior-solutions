@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { areas } from "@/lib/areas";
+import { guides } from "@/lib/guides";
 import { products } from "@/lib/products";
 import { site } from "@/lib/site";
 
@@ -17,6 +18,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...products.map((p) => page(`/products/${p.slug}`, 0.9)),
     page("/areas", 0.7),
     ...areas.map((a) => page(`/areas/${a.slug}`, 0.7)),
+    page("/guides", 0.7),
+    ...guides.map((g) => page(`/guides/${g.slug}`, 0.7)),
+    page("/for-architects", 0.6),
     page("/faq", 0.8),
     page("/about", 0.6),
     page("/contact", 0.8),

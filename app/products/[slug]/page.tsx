@@ -6,6 +6,7 @@ import { ArrowIcon } from "@/components/Icons";
 import JsonLd from "@/components/JsonLd";
 import QuoteForm from "@/components/QuoteForm";
 import { areas } from "@/lib/areas";
+import { guides } from "@/lib/guides";
 import { getProduct, products } from "@/lib/products";
 import { breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/schema";
 
@@ -104,6 +105,15 @@ export default async function ProductPage({ params }: Props) {
               </Link>
             </li>
           ))}
+          {guides
+            .filter((g) => g.products.includes(p.slug))
+            .map((g) => (
+              <li key={g.slug}>
+                <Link href={`/guides/${g.slug}`}>
+                  Guide: {g.name} <ArrowIcon />
+                </Link>
+              </li>
+            ))}
           {areas.slice(0, 3).map((a) => (
             <li key={a.slug}>
               <Link href={`/areas/${a.slug}`}>

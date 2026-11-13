@@ -81,7 +81,13 @@ export default function Footer() {
               <Link href="/about">About</Link>
             </li>
             <li>
+              <Link href="/guides">Guides</Link>
+            </li>
+            <li>
               <Link href="/faq">FAQ</Link>
+            </li>
+            <li>
+              <Link href="/for-architects">For architects and designers</Link>
             </li>
             <li>
               <a href={site.catalog} data-track="download_catalog" data-track-at="footer">
