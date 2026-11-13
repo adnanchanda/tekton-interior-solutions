@@ -419,8 +419,9 @@ a.panel:focus-visible {
 
 .iso-part {
   transform: translate(calc(var(--e) * var(--dx) * 1px), calc(var(--e) * var(--dy) * 1px));
-  transition: transform 800ms var(--ease);
-  transition-delay: calc(var(--i) * 28ms);
+  /* --e is driven by scroll position (see Enhance.tsx); the short
+     transition only smooths the steps between scroll frames. */
+  transition: transform 140ms linear;
 }
 
 .iso polygon {
@@ -460,13 +461,6 @@ a.panel:focus-visible {
 
 .iso-right {
   fill: color-mix(in oklab, var(--m) 72%, #000);
-}
-
-a:hover .iso,
-a:focus-visible .iso,
-.iso:hover,
-.js [data-reveal]:not([data-in]) .iso {
-  --e: 1;
 }
 
 /* ---------- hero ---------- */
@@ -1450,10 +1444,6 @@ main:not(:has(.band)) + .site-footer {
   *::after {
     animation: none !important;
     transition: none !important;
-  }
-
-  .js [data-reveal]:not([data-in]) .iso {
-    --e: 0;
   }
 
   .js .sheet[data-reveal]:not([data-in]),
