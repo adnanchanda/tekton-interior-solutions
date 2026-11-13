@@ -7,9 +7,9 @@ import { breadcrumbSchema } from "@/lib/schema";
 import { formatAddress, mapsQuery, site, whatsappLink } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Contact and Factory Address in Yewalewadi, Pune",
+  title: "Contact and Factory Address in Kondhwa Budruk, Pune",
   description:
-    "Call or WhatsApp Tekton Interior Solutions on +91 7385036389. Factory opposite Sinhgad College, Yewalewadi, Pune 411048. Open Monday to Saturday, 9 AM to 7 PM.",
+    "Call or WhatsApp Tekton Interior Solutions on +91 7385036389. Factory near D-Mart, Somji, Kondhwa Budruk, Pune 411048. Open Monday to Saturday, 9 AM to 7 PM.",
   alternates: { canonical: "/contact" },
 };
 
@@ -62,7 +62,7 @@ export default function ContactPage() {
           </div>
           <div className="panel panel--white contact__map">
             <iframe
-              title="Map showing the Tekton Interior Solutions factory in Yewalewadi, Pune"
+              title="Map showing the Tekton Interior Solutions factory in Kondhwa Budruk, Pune"
               src={`https://www.google.com/maps?q=${mapsQuery()}&output=embed`}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"

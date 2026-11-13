@@ -27,7 +27,7 @@ const steps = [
   },
   {
     name: "We make it in our factory",
-    text: "Boards are cut, edge-banded and drilled in Yewalewadi. Chairs and sofas are assembled and upholstered in the same place.",
+    text: "Boards are cut, edge-banded and drilled in Kondhwa Budruk. Chairs and sofas are assembled and upholstered in the same place.",
   },
   {
     name: "We deliver and install",
@@ -136,7 +136,7 @@ export default function Home() {
             <h2 id="why-h">Buy from the factory, not from a showroom.</h2>
             <p>
               A showroom sells what is on its floor. A manufacturer makes what fits yours. Tekton cuts, edge-bands and
-              assembles furniture in its own factory in Yewalewadi and sends its own team to install it.
+              assembles furniture in its own factory in Kondhwa Budruk and sends its own team to install it.
             </p>
           </div>
           <dl className="facts">
@@ -191,7 +191,7 @@ export default function Home() {
       <section className="wrap section" aria-labelledby="areas-h">
         <h2 id="areas-h">Where we deliver in Pune</h2>
         <p className="section__intro">
-          We deliver and install across Pune and Pimpri-Chinchwad from our factory in Yewalewadi.
+          We deliver and install across Pune and Pimpri-Chinchwad from our factory in Kondhwa Budruk.
         </p>
         <ul className="chips">
           {areas.map((a) => (

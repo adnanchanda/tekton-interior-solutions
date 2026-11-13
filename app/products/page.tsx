@@ -19,7 +19,7 @@ export default function ProductsPage() {
       <div className="wrap prose-head">
         <h1>Furniture we make in Pune</h1>
         <p className="lead">
-          {site.name} makes {products.length} lines of furniture at its factory in Yewalewadi, Pune: six for offices
+          {site.name} makes {products.length} lines of furniture at its factory in Kondhwa Budruk, Pune: six for offices
           and three for homes. Every piece is made to order from your plan and installed by our team.
         </p>
       </div>

@@ -1,8 +1,10 @@
 // Single source of truth for business facts. Every page, the JSON-LD,
 // the sitemap and llms.txt read from here, so a fact is changed once.
 //
+// Factory address and coordinates were supplied by the owner's family on
+// 14 Nov 2026 (the factory was previously listed in Yewalewadi).
 // OWNER TO CONFIRM (taken from the catalogue PDF and git history):
-//   - factory and head-office addresses below
+//   - head-office address below
 //   - that the phone number is also the WhatsApp number
 // OWNER TO SUPPLY (left out on purpose, never invent these):
 //   - price ranges, lead times, warranty terms, GST number
@@ -14,9 +16,9 @@ export const site = {
   url: "https://www.tektoninteriorsolutions.in",
   tagline: "Furniture manufacturer in Pune for offices and homes",
   description:
-    "Tekton Interior Solutions is a furniture manufacturer in Yewalewadi, Pune. Since 2017 it has made and installed modular office workstations, office chairs, tables and storage, and makes modular wardrobes, kitchens and beds for homes.",
+    "Tekton Interior Solutions is a furniture manufacturer in Kondhwa Budruk, Pune. Since 2017 it has made and installed modular office workstations, office chairs, tables and storage, and makes modular wardrobes, kitchens and beds for homes.",
   metaDescription:
-    "Furniture manufacturer in Yewalewadi, Pune since 2017. Modular office workstations, chairs, tables and storage, plus wardrobes, kitchens and beds for homes.",
+    "Furniture manufacturer in Kondhwa Budruk, Pune since 2017. Modular office workstations, chairs, tables and storage, plus wardrobes, kitchens and beds for homes.",
   foundedYear: 2017,
   founded: "May 2017",
   director: "Irfan Ahmed",
@@ -29,11 +31,13 @@ export const site = {
   hours: { days: "Monday to Saturday", open: "09:00", close: "19:00", label: "9:00 AM to 7:00 PM" },
   factory: {
     label: "Factory",
-    street: "Opp. Sinhgad College, Behind Ganraj Marble, Yewalewadi, Kondhwa Budruk",
+    street: "Plot 101, Near D-Mart, Somji, Kondhwa Budruk",
     locality: "Pune",
     region: "Maharashtra",
     postalCode: "411048",
     country: "IN",
+    // Supplied by the owner on 14 Nov 2026.
+    geo: { latitude: 18.457178, longitude: 73.893761 },
   },
   headOffice: {
     label: "Head office",
@@ -53,8 +57,10 @@ export const yearsInBusiness = () => new Date().getFullYear() - site.foundedYear
 export const formatAddress = (a: { street: string; locality: string; postalCode: string }) =>
   `${a.street}, ${a.locality} ${a.postalCode}`;
 
+// The map and the directions link point at the exact coordinates, not the
+// address text, so the pin lands on the building.
 export const mapsQuery = () =>
-  encodeURIComponent(`${site.name}, ${formatAddress(site.factory)}`);
+  encodeURIComponent(`${site.factory.geo.latitude},${site.factory.geo.longitude}`);
 
 export const whatsappLink = (message = "Hi, I found Tekton Interior Solutions on your website. I would like a quote.") =>
   `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(message)}`;

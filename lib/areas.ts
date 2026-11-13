@@ -24,7 +24,7 @@ export const areas: Area[] = [
     metaDescription:
       "Modular workstations, office chairs and meeting-room furniture for IT offices in Hinjewadi, made in Pune by Tekton Interior Solutions and installed on site.",
     answer:
-      "Tekton Interior Solutions supplies and installs office furniture in Hinjewadi from its factory in Yewalewadi, Pune. Most Hinjewadi orders are for IT and services offices: modular workstations in quantity, mesh workstation chairs, meeting tables and storage.",
+      "Tekton Interior Solutions supplies and installs office furniture in Hinjewadi from its factory in Kondhwa Budruk, Pune. Most Hinjewadi orders are for IT and services offices: modular workstations in quantity, mesh workstation chairs, meeting tables and storage.",
     context:
       "Hinjewadi is home to the Rajiv Gandhi Infotech Park, so offices here are large open floors planned by seat count. Furniture is ordered in phases as teams grow, and landlords and IT park authorities often set rules for delivery hours and lift use.",
     typical: ["modular-office-workstations", "office-chairs", "office-tables", "cafeteria-furniture"],
@@ -41,7 +41,7 @@ export const areas: Area[] = [
     faqs: [
       {
         q: "Who makes modular workstations for offices in Hinjewadi?",
-        a: "Tekton Interior Solutions is a Pune manufacturer that makes modular workstations at its Yewalewadi factory and installs them in offices across Pune, including Hinjewadi Phase 1, 2 and 3.",
+        a: "Tekton Interior Solutions is a Pune manufacturer that makes modular workstations at its Kondhwa Budruk factory and installs them in offices across Pune, including Hinjewadi Phase 1, 2 and 3.",
       },
       {
         q: "Can furniture be installed at night or on weekends in an IT park?",
@@ -73,7 +73,7 @@ export const areas: Area[] = [
     faqs: [
       {
         q: "Do you make both office and home furniture for Kharadi?",
-        a: "Yes. Tekton makes office workstations, chairs, tables and storage, and also makes modular wardrobes, kitchens and beds for homes. Both are made at the same factory in Yewalewadi, Pune.",
+        a: "Yes. Tekton makes office workstations, chairs, tables and storage, and also makes modular wardrobes, kitchens and beds for homes. Both are made at the same factory in Kondhwa Budruk, Pune.",
       },
       {
         q: "When should I order wardrobes for a new flat?",
@@ -150,16 +150,16 @@ export const areas: Area[] = [
     name: "Magarpatta and Hadapsar",
     title: "Furniture Manufacturer for Magarpatta and Hadapsar, Pune",
     metaDescription:
-      "Office furniture for Magarpatta Cybercity and Hadapsar, and wardrobes, kitchens and beds for nearby homes, made by Tekton Interior Solutions in Yewalewadi, Pune.",
+      "Office furniture for Magarpatta Cybercity and Hadapsar, and wardrobes, kitchens and beds for nearby homes, made by Tekton Interior Solutions in Kondhwa Budruk, Pune.",
     answer:
-      "Tekton Interior Solutions makes office and home furniture for Magarpatta, Hadapsar and Amanora from its factory in Yewalewadi, which is in the same south-east side of Pune. It supplies workstations and chairs to offices and wardrobes, kitchens and beds to homes.",
+      "Tekton Interior Solutions makes office and home furniture for Magarpatta, Hadapsar and Amanora from its factory in Kondhwa Budruk, which is in the same south-east side of Pune. It supplies workstations and chairs to offices and wardrobes, kitchens and beds to homes.",
     context:
-      "Magarpatta City combines the Cybercity IT park with a large residential township, and Hadapsar and Amanora add more offices and housing around it. It is the part of Pune closest to Tekton's factory in Yewalewadi and its head office in Lullanagar.",
+      "Magarpatta City combines the Cybercity IT park with a large residential township, and Hadapsar and Amanora add more offices and housing around it. It is the part of Pune closest to Tekton's factory in Kondhwa Budruk and its head office in Lullanagar.",
     typical: ["modular-office-workstations", "office-chairs", "modular-wardrobes", "beds-and-bedroom-furniture"],
     advice: [
       {
         heading: "Visit the factory before you order",
-        body: "Yewalewadi is a short drive from Hadapsar and Magarpatta. Seeing boards being cut and edge-banded, and sitting in a sample chair, tells you more than any catalogue. Call ahead to fix a time.",
+        body: "Kondhwa Budruk is a short drive from Hadapsar and Magarpatta. Seeing boards being cut and edge-banded, and sitting in a sample chair, tells you more than any catalogue. Call ahead to fix a time.",
       },
       {
         heading: "Township rules for home interiors",
@@ -169,7 +169,7 @@ export const areas: Area[] = [
     faqs: [
       {
         q: "Is there a furniture manufacturer near Hadapsar and Magarpatta?",
-        a: "Yes. Tekton Interior Solutions has its factory opposite Sinhgad College in Yewalewadi, Kondhwa Budruk, and its head office in Lullanagar, both in south-east Pune near Hadapsar.",
+        a: "Yes. Tekton Interior Solutions has its factory near D-Mart at Somji, Kondhwa Budruk, and its head office in Lullanagar, both in south-east Pune near Hadapsar.",
       },
       {
         q: "Can I visit the factory?",

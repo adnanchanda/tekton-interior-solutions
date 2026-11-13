@@ -9,7 +9,7 @@ import { clients, formatAddress, site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "About Us: Furniture Manufacturer in Pune since 2017",
   description:
-    "Tekton Interior Solutions has made office and home furniture in Yewalewadi, Pune since May 2017. It began with office seating and now makes complete office fit-outs.",
+    "Tekton Interior Solutions has made office and home furniture in Kondhwa Budruk, Pune since May 2017. It began with office seating and now makes complete office fit-outs.",
   alternates: { canonical: "/about" },
 };
 
@@ -19,7 +19,7 @@ export default function AboutPage() {
       <Crumbs trail={[{ name: "About" }]} />
       <PageSheet
         h1="A Pune furniture factory, at work since 2017"
-        answer={`${site.name} is a furniture manufacturer based in Yewalewadi, Pune. It was founded in ${site.founded} and is led by its director, ${site.director}. It makes office furniture and residential furniture in its own factory and installs it on site.`}
+        answer={`${site.name} is a furniture manufacturer based in Kondhwa Budruk, Pune. It was founded in ${site.founded} and is led by its director, ${site.director}. It makes office furniture and residential furniture in its own factory and installs it on site.`}
         scene="storage"
         sceneTitle="Drawing of storage units, shown as their panels"
       />

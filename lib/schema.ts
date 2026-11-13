@@ -29,8 +29,15 @@ export const businessSchema = () => ({
   foundingDate: "2017-05",
   founder: { "@type": "Person", name: site.director },
   address: postal(site.factory),
+  geo: { "@type": "GeoCoordinates", ...site.factory.geo },
+  hasMap: `https://www.google.com/maps/search/?api=1&query=${site.factory.geo.latitude},${site.factory.geo.longitude}`,
   location: [
-    { "@type": "Place", name: `${site.name} factory`, address: postal(site.factory) },
+    {
+      "@type": "Place",
+      name: `${site.name} factory`,
+      address: postal(site.factory),
+      geo: { "@type": "GeoCoordinates", ...site.factory.geo },
+    },
     { "@type": "Place", name: `${site.name} head office`, address: postal(site.headOffice) },
   ],
   areaServed: [

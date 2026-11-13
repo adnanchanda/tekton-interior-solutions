@@ -32,9 +32,9 @@ export const products: Product[] = [
     scene: "workstation",
     title: "Modular Office Workstation Manufacturer in Pune",
     metaDescription:
-      "Tekton makes and installs modular office workstations in Pune: linear, L-shape and cluster desks with screens, pedestals and cable management. Factory in Yewalewadi.",
+      "Tekton makes and installs modular office workstations in Pune: linear, L-shape and cluster desks with screens, pedestals and cable management. Factory in Kondhwa Budruk.",
     answer:
-      "Tekton Interior Solutions manufactures modular office workstations at its factory in Yewalewadi, Pune and installs them on site. Workstations are made to your seat count and floor plan: linear benches, face-to-face clusters, L-shape desks and cubicles, with partition screens, pedestals and cable management built in.",
+      "Tekton Interior Solutions manufactures modular office workstations at its factory in Kondhwa Budruk, Pune and installs them on site. Workstations are made to your seat count and floor plan: linear benches, face-to-face clusters, L-shape desks and cubicles, with partition screens, pedestals and cable management built in.",
     range: [
       "Linear and bench workstations",
       "Face-to-face cluster workstations",
@@ -325,7 +325,7 @@ export const products: Product[] = [
     metaDescription:
       "Made-to-measure modular wardrobes from a Pune factory: hinged and sliding wardrobes with lofts, drawers and your choice of laminate, by Tekton Interior Solutions.",
     answer:
-      "Tekton Interior Solutions makes modular wardrobes to measure at its factory in Yewalewadi, Pune. Because the wardrobe is cut and edge-banded in the factory and only assembled at your home, installation is quick and clean. Hinged or sliding shutters, lofts, drawers and internal layouts are made to your wall and your storage.",
+      "Tekton Interior Solutions makes modular wardrobes to measure at its factory in Kondhwa Budruk, Pune. Because the wardrobe is cut and edge-banded in the factory and only assembled at your home, installation is quick and clean. Hinged or sliding shutters, lofts, drawers and internal layouts are made to your wall and your storage.",
     range: [
       "Hinged-door wardrobes",
       "Sliding-door wardrobes",

@@ -22,7 +22,7 @@ The website for Tekton Interior Solutions, a furniture manufacturer in Pune. It 
 
 ## Positioning
 
-Tekton makes the furniture in its own factory in Yewalewadi, Pune and installs it. It is a manufacturer, not a showroom or a reseller, and it covers both office and residential work.
+Tekton makes the furniture in its own factory in Kondhwa Budruk, Pune and installs it. It is a manufacturer, not a showroom or a reseller, and it covers both office and residential work.
 
 ## Operating Context
 
@@ -33,7 +33,8 @@ Buyers evaluate from floor plans, seat counts, laminate shade cards, BOQs and pe
 - In business since May 2017.
 - Started with seating (office chairs, visitor chairs, sofas), then added modular furniture: workstations, executive tables, reception tables, conference tables, pantry tables and desking systems.
 - Also makes residential furniture. The exact residential range is not confirmed.
-- Factory address in git history: Opp. Sinhgad College, Behind Ganraj Marble, Kondhwa Annexe, Yewalewadi, Pune 411048. An earlier version read "6/1B/1, Kamte Fabrication, Opposite Sinhgad College, Near CNG Pump, Yewalewadi". The current one is not confirmed.
+- Current factory address (owner-supplied, 14 Nov 2026): Plot 101, Near D-Mart, Somji, Kondhwa Budruk, Pune 411048 (18.457178, 73.893761).
+- Older factory address in git history: Opp. Sinhgad College, Behind Ganraj Marble, Kondhwa Annexe, Yewalewadi, Pune 411048. An earlier version read "6/1B/1, Kamte Fabrication, Opposite Sinhgad College, Near CNG Pump, Yewalewadi". The current one is not confirmed.
 - Phone +91 7385036389. Hours Monday to Saturday, 9:00 AM to 7:00 PM.
 - Not confirmed: prices, lead times, warranty terms, GST number, machinery list, minimum order, delivery radius.
 

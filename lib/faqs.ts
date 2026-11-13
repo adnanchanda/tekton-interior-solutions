@@ -25,7 +25,7 @@ export const faqGroups: { heading: string; items: Faq[] }[] = [
       },
       {
         q: "Is Tekton a manufacturer or a dealer?",
-        a: "Tekton is a manufacturer. Furniture is made at its own factory in Yewalewadi, Pune and installed by its own team, so there is no dealer in between.",
+        a: "Tekton is a manufacturer. Furniture is made at its own factory in Kondhwa Budruk, Pune and installed by its own team, so there is no dealer in between.",
       },
       {
         q: "How long has Tekton been in business?",
@@ -54,7 +54,7 @@ export const faqGroups: { heading: string; items: Faq[] }[] = [
       },
       {
         q: "Can I see the products before ordering?",
-        a: "Yes. You can download the product catalogue from this website, or visit the factory in Yewalewadi by appointment to see materials and samples.",
+        a: "Yes. You can download the product catalogue from this website, or visit the factory in Kondhwa Budruk by appointment to see materials and samples.",
       },
       {
         q: "Do you make furniture to custom sizes?",
