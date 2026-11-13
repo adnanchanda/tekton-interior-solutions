@@ -7,9 +7,9 @@ import { site } from "./site";
 export const trade = {
   path: "/for-architects",
   name: "For architects and designers",
-  title: "Furniture Manufacturing Partner for Architects and Interior Designers in Pune",
+  title: "Furniture Maker for Architects and Designers in Pune",
   metaDescription:
-    "Tekton Interior Solutions makes and installs furniture to architects' and interior designers' drawings in Pune: office fit-outs, wardrobes, kitchens and custom pieces.",
+    "Tekton makes and installs furniture to architects' and interior designers' drawings in Pune: office fit-outs, wardrobes, kitchens and custom pieces.",
   answer: `${site.name} works with architects and interior designers in Pune as their manufacturing and installation partner. The drawings and layout are yours. Tekton makes the furniture to them at its own factory in Kondhwa Budruk and installs it at your client's site.`,
   steps: [
     {

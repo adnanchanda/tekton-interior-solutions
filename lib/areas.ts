@@ -212,7 +212,7 @@ export const areas: Area[] = [
   {
     slug: "nibm-road",
     name: "NIBM Road and Undri",
-    title: "Modular Wardrobes and Kitchens for NIBM Road and Undri, Pune",
+    title: "Modular Wardrobes and Kitchens for NIBM Road and Undri",
     metaDescription:
       "Made-to-measure modular wardrobes, kitchens and beds for apartments on NIBM Road, Undri and Mohammedwadi, made nearby in Kondhwa Budruk by Tekton Interior Solutions.",
     answer:

@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!g) return {};
   const path = `/guides/${g.slug}`;
   return {
-    title: g.title,
+    title: g.seoTitle,
     description: g.metaDescription,
     alternates: { canonical: path },
     openGraph: { title: g.title, description: g.metaDescription, url: path, type: "article" },

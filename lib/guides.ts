@@ -14,6 +14,7 @@ export type Guide = {
   slug: string;
   name: string; // short name for links
   title: string;
+  seoTitle: string; // shorter title for search results (under 60 characters)
   metaDescription: string;
   answer: string; // the direct answer, first thing on the page
   sections: GuideSection[];
@@ -27,6 +28,7 @@ export const guides: Guide[] = [
     slug: "office-workstation-sizes",
     name: "Workstation sizes and space per seat",
     title: "Office Workstation Sizes and Space per Seat: A Planning Guide",
+    seoTitle: "Office Workstation Sizes and Space per Seat",
     metaDescription:
       "Standard office workstation sizes in India, how much floor space to allow per seat, and the aisle widths to keep. A practical guide for planning an office layout.",
     answer:
@@ -101,6 +103,7 @@ export const guides: Guide[] = [
     slug: "mdf-vs-plywood-vs-hdhmr-vs-particle-board",
     name: "MDF vs plywood vs HDHMR vs particle board",
     title: "MDF vs Plywood vs HDHMR vs Particle Board: Which Board for Which Furniture",
+    seoTitle: "MDF vs Plywood vs HDHMR vs Particle Board",
     metaDescription:
       "How particle board, MDF, HDHMR and plywood differ in strength, moisture resistance and cost, and which board to use for desks, wardrobes, kitchens and shutters.",
     answer:
@@ -180,6 +183,7 @@ export const guides: Guide[] = [
     slug: "modular-wardrobe-planning",
     name: "How to plan a modular wardrobe",
     title: "How to Plan a Modular Wardrobe: Sizes, Shutters and Internal Layout",
+    seoTitle: "How to Plan a Modular Wardrobe: Sizes and Layout",
     metaDescription:
       "Standard modular wardrobe depth, height and shutter widths, hinged versus sliding doors, and how to divide the inside into hanging, shelves and drawers.",
     answer:
@@ -243,6 +247,7 @@ export const guides: Guide[] = [
     slug: "modular-kitchen-layouts",
     name: "Modular kitchen layouts and sizes",
     title: "Modular Kitchen Layouts and Standard Sizes Explained",
+    seoTitle: "Modular Kitchen Layouts and Standard Sizes",
     metaDescription:
       "Straight, L-shape, U-shape, parallel and island kitchens compared, with standard counter height, depth and cabinet sizes used in Indian modular kitchens.",
     answer:
@@ -307,8 +312,9 @@ export const guides: Guide[] = [
     slug: "how-to-compare-furniture-quotes",
     name: "How to compare furniture quotes",
     title: "How to Compare Modular Furniture Quotes: A Seven-Point Checklist",
+    seoTitle: "How to Compare Modular Furniture Quotes",
     metaDescription:
-      "Two modular furniture quotes are only comparable if seven things match: sizes, board, thickness, finish, edge banding, hardware and what is included. Use this checklist.",
+      "Furniture quotes are only comparable if seven things match: sizes, board, thickness, finish, edge banding, hardware and inclusions. A checklist.",
     answer:
       "Two furniture quotes can only be compared if seven things are the same in both: the sizes, the board, the board thickness, the surface finish, the edge banding, the hardware brand, and what is included, such as delivery, installation and tax. A lower total usually means one of these is different.",
     sections: [
