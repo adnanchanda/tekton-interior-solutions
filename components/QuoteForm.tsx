@@ -45,13 +45,14 @@ export default function QuoteForm({ interest = "" }: { interest?: string }) {
         "service_kg85zgf",
         "template_9qhyf5n",
         {
-          // The EmailJS template sends to {{email}}, so that field must hold
-          // the business inbox. The customer's own email is in the message.
-          email: site.email,
-          reply_to: email || site.email,
-          from_name: name,
-          from_email: email || "not given",
+          // The EmailJS template is addressed to the business inbox, copies
+          // the customer on {{email}} when they gave one, and prints
+          // {{name}}, {{email}}, {{phone}} and {{location}} in the body.
+          // The whole enquiry travels in {{location}} so it is always shown.
+          name,
+          email,
           phone,
+          location: message,
           subject: `Website enquiry: ${need}`,
           message,
         },
