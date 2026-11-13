@@ -1,104 +1,88 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono, Montserrat } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import { Archivo } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
+import ActionBar from "@/components/ActionBar";
+import Enhance from "@/components/Enhance";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
+import JsonLd from "@/components/JsonLd";
+import { businessSchema, websiteSchema } from "@/lib/schema";
+import { site } from "@/lib/site";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+// One family. The width axis gives the condensed display voice and the
+// regular text voice from the same file.
+const archivo = Archivo({
   subsets: ["latin"],
+  axes: ["wdth"],
+  variable: "--font-archivo",
   display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const montserrat = Montserrat({
-  variable: "--font-montserrat",
-  subsets: ["latin"],
-  display: "swap",
-});
+// Paste the codes from Google Search Console and Bing Webmaster Tools into
+// Vercel as environment variables. Nothing is rendered until they are set.
+const googleVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
+const bingVerification = process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION;
 
 export const metadata: Metadata = {
+  metadataBase: new URL(site.url),
   title: {
-    default: "Tekton Interior Solutions - Premium Office Furniture in Pune",
-    template: "%s | Tekton Interior Solutions",
+    default: "Furniture Manufacturer in Pune | Tekton Interior Solutions",
+    template: "%s | Tekton",
   },
-  description: "Transform your workspace with Tekton Interior Solutions. Premium office furniture, ergonomic chairs, modular workstations, and custom interior solutions in Pune, Maharashtra. Enhancing success through innovative design.",
-  keywords: [
-    "office furniture",
-    "interior solutions",
-    "ergonomic chairs",
-    "modular workstations",
-    "office design",
-    "furniture manufacturer",
-    "Pune",
-    "Maharashtra",
-    "commercial furniture",
-    "workspace solutions"
-  ],
-  authors: [{ name: "Tekton Interior Solutions" }],
-  creator: "Tekton Interior Solutions",
-  publisher: "Tekton Interior Solutions",
-  metadataBase: new URL("https://tektoninteriors.com"),
-  alternates: {
-    canonical: "/",
-  },
+  description: site.metaDescription,
+  applicationName: site.name,
+  authors: [{ name: site.name, url: site.url }],
+  creator: site.name,
+  publisher: site.name,
+  category: "Furniture manufacturer",
+  alternates: { canonical: "/" },
   openGraph: {
     type: "website",
-    locale: "en_US",
-    url: "https://tektoninteriors.com",
-    title: "Tekton Interior Solutions - Premium Office Furniture",
-    description: "Transform your workspace with premium office furniture and interior solutions. Serving businesses across Pune and Maharashtra.",
-    siteName: "Tekton Interior Solutions",
-    images: [
-      {
-        url: "/hero-photo.png",
-        width: 1200,
-        height: 630,
-        alt: "Tekton Interior Solutions - Modern Office Furniture",
-      },
-    ],
+    locale: "en_IN",
+    url: "/",
+    siteName: site.name,
+    title: "Furniture Manufacturer in Pune for Offices and Homes",
+    description: site.metaDescription,
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tekton Interior Solutions - Premium Office Furniture",
-    description: "Transform your workspace with premium office furniture and interior solutions.",
-    images: ["/hero-photo.png"],
+    title: "Furniture Manufacturer in Pune for Offices and Homes",
+    description: site.metaDescription,
   },
   robots: {
     index: true,
     follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
+    googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
   },
   verification: {
-    google: "your-google-verification-code",
+    ...(googleVerification ? { google: googleVerification } : {}),
+    ...(bingVerification ? { other: { "msvalidate.01": bingVerification } } : {}),
   },
+  formatDetection: { telephone: true, address: true, email: true },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export const viewport: Viewport = {
+  themeColor: "#8fae2e",
+  width: "device-width",
+  initialScale: 1,
+};
+
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <head>
-        <link rel="icon" href="/logo.png" sizes="any" />
-        <link rel="apple-touch-icon" href="/logo.png" />
-        <meta name="theme-color" content="#8ca92b" />
-      </head>
-      <body
-        className={`${montserrat.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+    <html lang="en-IN" className={archivo.variable}>
+      <body>
+        <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
+        <Header />
+        <main id="main">{children}</main>
+        <Footer />
+        <ActionBar />
+        <Enhance />
+        <JsonLd data={[businessSchema(), websiteSchema()]} />
+        <Script src={`https://www.googletagmanager.com/gtag/js?id=${site.gaId}`} strategy="afterInteractive" />
+        <Script id="ga" strategy="afterInteractive">
+          {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${site.gaId}');`}
+        </Script>
       </body>
     </html>
   );

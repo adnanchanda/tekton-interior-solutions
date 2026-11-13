@@ -1,15 +1,12 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-    theme: {
-      extend: {
-        fontFamily: {
-          seria: ["Seria", "serif"],
-        },
-      },
-    },
-    plugins: [],
+  async redirects() {
+    return [
+      // The catalogue used to live at two paths; keep one.
+      { source: "/TektonCatalog.pdf", destination: "/documents/TektonCatalog.pdf", permanent: true },
+    ];
+  },
 };
 
 export default nextConfig;
