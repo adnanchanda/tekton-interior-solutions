@@ -22,7 +22,9 @@ const archivo = Archivo({
 // Paste the codes from Google Search Console and Bing Webmaster Tools into
 // Vercel as environment variables. Nothing is rendered until they are set.
 const googleVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
-const bingVerification = process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION;
+// Google is verified by the file public/googlecd09ead64c285a6e.html.
+// Bing is verified by this meta tag; the value is public, not a secret.
+const bingVerification = process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION ?? "449B6DE21F705752F04B990F3705F305";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
