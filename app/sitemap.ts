@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   });
   return [
     page("", 1),
+    page("/office-furniture-manufacturer-pune", 0.9),
     page("/products", 0.9),
     ...products.map((p) => page(`/products/${p.slug}`, 0.9)),
     page("/areas", 0.7),

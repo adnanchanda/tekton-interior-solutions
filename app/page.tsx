@@ -112,7 +112,7 @@ export default function Home() {
         </p>
 
         <h3 id="office" className="group-h">
-          Office furniture
+          <Link href="/office-furniture-manufacturer-pune">Office furniture</Link>
         </h3>
         <div className="sheet sheet--products" data-reveal>
           {officeProducts.map((p) => (

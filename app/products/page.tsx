@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { ContactBand, Crumbs, ProductPanel } from "@/components/blocks";
 import JsonLd from "@/components/JsonLd";
 import { homeProducts, officeProducts, products } from "@/lib/products";
@@ -25,6 +26,10 @@ export default function ProductsPage() {
       </div>
       <section className="wrap section section--tight" aria-labelledby="office">
         <h2 id="office">Office furniture</h2>
+        <p className="section__intro">
+          Setting up a whole office? See <Link href="/office-furniture-manufacturer-pune">office furniture made in Pune</Link>,
+          room by room.
+        </p>
         <div className="sheet sheet--products" data-reveal>
           {officeProducts.map((p) => (
             <ProductPanel key={p.slug} p={p} />

@@ -27,6 +27,9 @@ export default function Footer() {
         <nav aria-label="Products">
           <h2>Products</h2>
           <ul>
+            <li>
+              <Link href="/office-furniture-manufacturer-pune">Office furniture manufacturer in Pune</Link>
+            </li>
             {products.map((p) => (
               <li key={p.slug}>
                 <Link href={`/products/${p.slug}`}>{p.name}</Link>

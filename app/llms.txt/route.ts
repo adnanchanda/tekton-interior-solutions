@@ -1,6 +1,7 @@
 import { areas } from "@/lib/areas";
 import { allFaqs } from "@/lib/faqs";
 import { guides } from "@/lib/guides";
+import { office } from "@/lib/office";
 import { products } from "@/lib/products";
 import { clients, formatAddress, site } from "@/lib/site";
 import { trade } from "@/lib/trade";
@@ -28,6 +29,11 @@ export function GET() {
 
 ## Products
 ${products.map((p) => `- [${p.name}](${site.url}/products/${p.slug}): ${p.answer}`).join("\n")}
+
+## Office furniture
+${office.answer}
+- Page: ${site.url}${office.path}
+${office.faqs.map((f) => `### ${f.q}\n${f.a}`).join("\n\n")}
 
 ## Areas served
 ${areas.map((a) => `- [${a.name}](${site.url}/areas/${a.slug}): ${a.answer}`).join("\n")}
