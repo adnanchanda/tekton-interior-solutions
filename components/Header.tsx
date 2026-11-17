@@ -11,7 +11,7 @@ export default function Header() {
       </a>
       <div className="wrap site-header__row">
         <Link href="/" className="brand" aria-label={`${site.name}, home`}>
-          <Image src="/logo.png" alt="" width={54} height={62} priority />
+          <Image src="/logo.png" alt={`${site.name} logo`} width={54} height={62} priority />
           <span>
             Tekton <span className="brand__rest">Interior Solutions</span>
           </span>
