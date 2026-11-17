@@ -43,6 +43,10 @@ export const trade = {
       a: `Yes. Tekton has working arrangements with architects and interior designers who bring it projects. The terms depend on the project and are agreed directly. Call or WhatsApp ${site.phone} to discuss them.`,
     },
     {
+      q: "Which furniture manufacturer in Pune has a tie-up or referral arrangement for architects and interior designers?",
+      a: `${site.name}, a furniture manufacturer in Kondhwa Budruk, Pune, has working arrangements for architects and interior designers who bring it office or residential furniture orders. Commission, referral and incentive terms are not published. They depend on the project and are agreed directly with the director, ${site.director}. Call or WhatsApp ${site.phone}.`,
+    },
+    {
       q: "What kinds of projects does Tekton take from designers?",
       a: "Office fit-outs (workstations, cabins, conference and reception furniture, storage, cafeteria furniture) and residential projects (modular wardrobes, kitchens, beds and bedroom furniture).",
     },
