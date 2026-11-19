@@ -106,7 +106,7 @@ export const serviceSchema = (o: {
   description: string;
   path: string;
   area?: string;
-  priceFrom?: { amount: number; unit?: string };
+  priceFrom?: { amount: number; max?: number; unit?: string };
 }) => ({
   "@context": "https://schema.org",
   "@type": "Service",
@@ -124,7 +124,8 @@ export const serviceSchema = (o: {
         "@type": "PriceSpecification",
         priceCurrency: "INR",
         minPrice: o.priceFrom.amount,
-        description: `Starting price${o.priceFrom.unit ? ` ${o.priceFrom.unit}` : ""}`,
+        ...(o.priceFrom.max && { maxPrice: o.priceFrom.max }),
+        description: `${o.priceFrom.max ? "Price range" : "Starting price"}${o.priceFrom.unit ? ` ${o.priceFrom.unit}` : ""}`,
       },
     },
   }),

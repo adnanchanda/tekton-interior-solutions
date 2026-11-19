@@ -4,7 +4,7 @@ export type Faq = { q: string; a: string };
 
 export type Product = {
   slug: string;
-  priceFrom: { amount: number; unit?: string }; // starting price in rupees
+  priceFrom: { amount: number; max?: number; unit?: string }; // starting price in rupees, or a range when max is set
   name: string;
   short: string;
   group: "office" | "home";
@@ -377,7 +377,7 @@ export const products: Product[] = [
   },
   {
     slug: "modular-kitchens",
-    priceFrom: { amount: 1200, unit: "per sq ft" },
+    priceFrom: { amount: 1200, max: 2500, unit: "per sq ft" },
     name: "Modular kitchens",
     short: "Kitchens",
     group: "home",
@@ -431,7 +431,7 @@ export const products: Product[] = [
   },
   {
     slug: "beds-and-bedroom-furniture",
-    priceFrom: { amount: 25000 },
+    priceFrom: { amount: 15000, max: 20000 },
     name: "Beds and bedroom furniture",
     short: "Beds",
     group: "home",
@@ -484,14 +484,23 @@ export const getProduct = (slug: string) => products.find((p) => p.slug === slug
 export const officeProducts = products.filter((p) => p.group === "office");
 export const homeProducts = products.filter((p) => p.group === "home");
 
-/** "₹6,000" or "₹700 per sq ft". */
+const rupees = (n: number) => `₹${n.toLocaleString("en-IN")}`;
+
+/** "₹6,000", "₹700 per sq ft" or "₹1,200 to ₹2,500 per sq ft". */
 export const priceLabel = (p: Product) =>
-  `₹${p.priceFrom.amount.toLocaleString("en-IN")}${p.priceFrom.unit ? ` ${p.priceFrom.unit}` : ""}`;
+  `${rupees(p.priceFrom.amount)}${p.priceFrom.max ? ` to ${rupees(p.priceFrom.max)}` : ""}${p.priceFrom.unit ? ` ${p.priceFrom.unit}` : ""}`;
+
+/** "from ₹6,000" for a starting price, "₹15,000 to ₹20,000" for a range. */
+export const priceText = (p: Product) => (p.priceFrom.max ? priceLabel(p) : `from ${priceLabel(p)}`);
+
+/** "The starting price for office chairs is ₹2,000" or "The price of modular kitchens is ₹1,200 to ₹2,500 per sq ft". */
+export const priceSentence = (p: Product) =>
+  `${p.priceFrom.max ? "The price of" : "The starting price for"} ${p.name.toLowerCase()} is ${priceLabel(p)}`;
 
 export const priceNote =
-  "Starting prices as of November 2026. The quote for your order depends on the size, board, finish, hardware and quantity.";
+  "Prices as of November 2026. The quote for your order depends on the size, board, finish, hardware and quantity.";
 
 export const priceFaq = (p: Product): Faq => ({
-  q: `What is the starting price of ${p.name.toLowerCase()} at Tekton?`,
-  a: `The starting price for ${p.name.toLowerCase()} at Tekton Interior Solutions in Pune is ${priceLabel(p)}. The quote for your order depends on the size, board, finish, hardware and quantity.`,
+  q: `What is the ${p.priceFrom.max ? "price" : "starting price"} of ${p.name.toLowerCase()} at Tekton?`,
+  a: `${priceSentence(p)} at Tekton Interior Solutions in Pune. The quote for your order depends on the size, board, finish, hardware and quantity.`,
 });

@@ -7,7 +7,7 @@ import JsonLd from "@/components/JsonLd";
 import QuoteForm from "@/components/QuoteForm";
 import { areas } from "@/lib/areas";
 import { guides } from "@/lib/guides";
-import { getProduct, priceFaq, priceLabel, priceNote, products } from "@/lib/products";
+import { getProduct, priceFaq, priceLabel, priceNote, priceSentence, products } from "@/lib/products";
 import { breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/schema";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -49,9 +49,10 @@ export default async function ProductPage({ params }: Props) {
       <div className="wrap article">
         <div className="article__main">
           <section aria-labelledby="price-h">
-            <h2 id="price-h">Starting price</h2>
+            <h2 id="price-h">{p.priceFrom.max ? "Price" : "Starting price"}</h2>
             <p>
-              The starting price for {p.name.toLowerCase()} is <strong>{priceLabel(p)}</strong>.
+              {priceSentence(p).replace(priceLabel(p), "")}
+              <strong>{priceLabel(p)}</strong>.
             </p>
             <p className="fine">{priceNote}</p>
           </section>
