@@ -7,7 +7,7 @@
 //   - head-office address below
 //   - that the phone number is also the WhatsApp number
 // OWNER TO SUPPLY (left out on purpose, never invent these):
-//   - price ranges, lead times, warranty terms, GST number
+//   - lead times, warranty terms, GST number (starting prices are in products.ts)
 //   - Google Maps place link once the Business Profile exists (mapsUrl)
 
 export const site = {

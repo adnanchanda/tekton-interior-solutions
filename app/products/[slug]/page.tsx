@@ -7,7 +7,7 @@ import JsonLd from "@/components/JsonLd";
 import QuoteForm from "@/components/QuoteForm";
 import { areas } from "@/lib/areas";
 import { guides } from "@/lib/guides";
-import { getProduct, products } from "@/lib/products";
+import { getProduct, priceFaq, priceLabel, priceNote, products } from "@/lib/products";
 import { breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/schema";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -31,6 +31,7 @@ export default async function ProductPage({ params }: Props) {
   const p = getProduct((await params).slug);
   if (!p) notFound();
   const path = `/products/${p.slug}`;
+  const faqs = [priceFaq(p), ...p.faqs];
   const others = products.filter((o) => o.group === p.group && o.slug !== p.slug);
 
   return (
@@ -47,6 +48,14 @@ export default async function ProductPage({ params }: Props) {
 
       <div className="wrap article">
         <div className="article__main">
+          <section aria-labelledby="price-h">
+            <h2 id="price-h">Starting price</h2>
+            <p>
+              The starting price for {p.name.toLowerCase()} is <strong>{priceLabel(p)}</strong>.
+            </p>
+            <p className="fine">{priceNote}</p>
+          </section>
+
           <section aria-labelledby="range-h">
             <h2 id="range-h">What we make in this range</h2>
             <ul className="ticks">
@@ -83,7 +92,7 @@ export default async function ProductPage({ params }: Props) {
 
           <section aria-labelledby="faq-h">
             <h2 id="faq-h">Questions about {p.name.toLowerCase()}</h2>
-            <FaqList faqs={p.faqs} />
+            <FaqList faqs={faqs} />
           </section>
         </div>
 
@@ -127,8 +136,8 @@ export default async function ProductPage({ params }: Props) {
       <ContactBand />
       <JsonLd
         data={[
-          serviceSchema({ name: p.name, description: p.metaDescription, path }),
-          faqSchema(p.faqs),
+          serviceSchema({ name: p.name, description: p.metaDescription, path, priceFrom: p.priceFrom }),
+          faqSchema(faqs),
           breadcrumbSchema([
             { name: "Products", path: "/products" },
             { name: p.name, path },

@@ -4,6 +4,7 @@ export type Faq = { q: string; a: string };
 
 export type Product = {
   slug: string;
+  priceFrom: { amount: number; unit?: string }; // starting price in rupees
   name: string;
   short: string;
   group: "office" | "home";
@@ -20,10 +21,13 @@ export type Product = {
 };
 
 // Sizes below are the common Indian market sizes for each product type.
-// They are guidance for buyers, not a Tekton price list or stock list.
+// They are guidance for buyers, not a Tekton stock list.
+// Starting prices (priceFrom) were supplied by the owner's family in
+// November 2026. Never change or add a price without a figure from them.
 export const products: Product[] = [
   {
     slug: "modular-office-workstations",
+    priceFrom: { amount: 6000 },
     name: "Modular office workstations",
     short: "Workstations",
     group: "office",
@@ -78,6 +82,7 @@ export const products: Product[] = [
   },
   {
     slug: "office-chairs",
+    priceFrom: { amount: 2000 },
     name: "Office chairs",
     short: "Office chairs",
     group: "office",
@@ -132,6 +137,7 @@ export const products: Product[] = [
   },
   {
     slug: "office-tables",
+    priceFrom: { amount: 8000 },
     name: "Executive, conference and reception tables",
     short: "Office tables",
     group: "office",
@@ -184,6 +190,7 @@ export const products: Product[] = [
   },
   {
     slug: "office-storage",
+    priceFrom: { amount: 3000 },
     name: "Office storage units",
     short: "Storage",
     group: "office",
@@ -229,6 +236,7 @@ export const products: Product[] = [
   },
   {
     slug: "cafeteria-furniture",
+    priceFrom: { amount: 10000 },
     name: "Cafeteria and breakout furniture",
     short: "Cafeteria",
     group: "office",
@@ -273,6 +281,7 @@ export const products: Product[] = [
   },
   {
     slug: "reception-lounge-sofas",
+    priceFrom: { amount: 15000 },
     name: "Waiting lounges and office sofas",
     short: "Lounge and sofas",
     group: "office",
@@ -315,6 +324,7 @@ export const products: Product[] = [
   },
   {
     slug: "modular-wardrobes",
+    priceFrom: { amount: 700, unit: "per sq ft" },
     name: "Modular wardrobes",
     short: "Wardrobes",
     group: "home",
@@ -367,6 +377,7 @@ export const products: Product[] = [
   },
   {
     slug: "modular-kitchens",
+    priceFrom: { amount: 1200, unit: "per sq ft" },
     name: "Modular kitchens",
     short: "Kitchens",
     group: "home",
@@ -420,6 +431,7 @@ export const products: Product[] = [
   },
   {
     slug: "beds-and-bedroom-furniture",
+    priceFrom: { amount: 25000 },
     name: "Beds and bedroom furniture",
     short: "Beds",
     group: "home",
@@ -471,3 +483,15 @@ export const products: Product[] = [
 export const getProduct = (slug: string) => products.find((p) => p.slug === slug);
 export const officeProducts = products.filter((p) => p.group === "office");
 export const homeProducts = products.filter((p) => p.group === "home");
+
+/** "₹6,000" or "₹700 per sq ft". */
+export const priceLabel = (p: Product) =>
+  `₹${p.priceFrom.amount.toLocaleString("en-IN")}${p.priceFrom.unit ? ` ${p.priceFrom.unit}` : ""}`;
+
+export const priceNote =
+  "Starting prices as of November 2026. The quote for your order depends on the size, board, finish, hardware and quantity.";
+
+export const priceFaq = (p: Product): Faq => ({
+  q: `What is the starting price of ${p.name.toLowerCase()} at Tekton?`,
+  a: `The starting price for ${p.name.toLowerCase()} at Tekton Interior Solutions in Pune is ${priceLabel(p)}. The quote for your order depends on the size, board, finish, hardware and quantity.`,
+});

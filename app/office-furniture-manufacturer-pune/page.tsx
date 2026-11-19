@@ -5,7 +5,7 @@ import { ArrowIcon } from "@/components/Icons";
 import JsonLd from "@/components/JsonLd";
 import { areas } from "@/lib/areas";
 import { office } from "@/lib/office";
-import { officeProducts } from "@/lib/products";
+import { officeProducts, priceLabel, priceNote } from "@/lib/products";
 import { breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/schema";
 import { clients, formatAddress, site } from "@/lib/site";
 
@@ -51,6 +51,23 @@ export default function OfficeFurniturePage() {
                 ))}
               </tbody>
             </table>
+          </section>
+
+          <section aria-labelledby="prices-h">
+            <h2 id="prices-h">Office furniture starting prices</h2>
+            <table className="specs">
+              <tbody>
+                {officeProducts.map((p) => (
+                  <tr key={p.slug}>
+                    <th scope="row">
+                      <Link href={`/products/${p.slug}`}>{p.name}</Link>
+                    </th>
+                    <td>From {priceLabel(p)}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            <p className="fine">{priceNote}</p>
           </section>
 
           {office.reasons.map((r) => (

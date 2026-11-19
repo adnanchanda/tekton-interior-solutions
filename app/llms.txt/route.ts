@@ -2,7 +2,7 @@ import { areas } from "@/lib/areas";
 import { allFaqs } from "@/lib/faqs";
 import { guides } from "@/lib/guides";
 import { office } from "@/lib/office";
-import { products } from "@/lib/products";
+import { priceLabel, priceNote, products } from "@/lib/products";
 import { clients, formatAddress, site } from "@/lib/site";
 import { trade } from "@/lib/trade";
 
@@ -29,6 +29,10 @@ export function GET() {
 
 ## Products
 ${products.map((p) => `- [${p.name}](${site.url}/products/${p.slug}): ${p.answer}`).join("\n")}
+
+## Starting prices
+${products.map((p) => `- ${p.name}: from ${priceLabel(p)}`).join("\n")}
+${priceNote}
 
 ## Office furniture
 ${office.answer}

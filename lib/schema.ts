@@ -101,7 +101,13 @@ export const breadcrumbSchema = (trail: { name: string; path: string }[]) => ({
   })),
 });
 
-export const serviceSchema = (o: { name: string; description: string; path: string; area?: string }) => ({
+export const serviceSchema = (o: {
+  name: string;
+  description: string;
+  path: string;
+  area?: string;
+  priceFrom?: { amount: number; unit?: string };
+}) => ({
   "@context": "https://schema.org",
   "@type": "Service",
   name: o.name,
@@ -110,6 +116,18 @@ export const serviceSchema = (o: { name: string; description: string; path: stri
   serviceType: o.name,
   provider: { "@id": businessId },
   areaServed: { "@type": "Place", name: o.area ?? "Pune, Maharashtra, India" },
+  ...(o.priceFrom && {
+    offers: {
+      "@type": "Offer",
+      priceCurrency: "INR",
+      priceSpecification: {
+        "@type": "PriceSpecification",
+        priceCurrency: "INR",
+        minPrice: o.priceFrom.amount,
+        description: `Starting price${o.priceFrom.unit ? ` ${o.priceFrom.unit}` : ""}`,
+      },
+    },
+  }),
 });
 
 export const articleSchema = (o: { title: string; description: string; path: string; updated: string }) => ({
