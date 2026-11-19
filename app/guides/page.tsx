@@ -9,7 +9,7 @@ import { breadcrumbSchema } from "@/lib/schema";
 export const metadata: Metadata = {
   title: "Furniture Buying Guides",
   description:
-    "Plain guides to buying office and home furniture in India: workstation sizes, boards and materials, wardrobe planning, kitchen layouts and how to compare quotes.",
+    "Plain guides to buying office and home furniture in India: workstation sizes, boards and materials, wardrobe planning, kitchen layouts and comparing quotes.",
   alternates: { canonical: "/guides" },
 };
 

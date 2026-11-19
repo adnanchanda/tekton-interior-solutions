@@ -30,7 +30,7 @@ export const guides: Guide[] = [
     title: "Office Workstation Sizes and Space per Seat: A Planning Guide",
     seoTitle: "Office Workstation Sizes and Space per Seat",
     metaDescription:
-      "Standard office workstation sizes in India, how much floor space to allow per seat, and the aisle widths to keep. A practical guide for planning an office layout.",
+      "Standard office workstation sizes in India, how much floor space to allow per seat, and the aisle widths to keep. A practical guide for planning an office.",
     answer:
       "A standard linear office workstation in India is 1200 mm wide and 600 mm deep per seat, at a desk height of about 750 mm. For an open-plan office, allow roughly 60 to 80 square feet of floor per person once aisles, meeting rooms and common areas are included.",
     sections: [

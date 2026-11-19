@@ -12,7 +12,7 @@ export const office = {
   name: "Office furniture manufacturer",
   title: "Office Furniture Manufacturer in Pune",
   metaDescription:
-    "Tekton makes office furniture at its own factory in Kondhwa Budruk, Pune: modular workstations, chairs, executive and conference tables, storage, cafeteria furniture and sofas.",
+    "Tekton makes office furniture at its own factory in Kondhwa Budruk, Pune: modular workstations, chairs, tables, storage, cafeteria furniture and sofas.",
   h1: "Office furniture manufacturer in Pune",
   answer: `${site.name} is an office furniture manufacturer in Pune. It makes modular workstations, office chairs, executive, conference and reception tables, storage units, cafeteria furniture and office sofas at its own factory in Kondhwa Budruk, and its own team installs them at your office. It has made office furniture since ${site.founded}.`,
   rooms: [

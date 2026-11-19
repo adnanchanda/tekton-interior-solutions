@@ -22,7 +22,7 @@ export const areas: Area[] = [
     name: "Hinjewadi",
     title: "Office Furniture Manufacturer for Hinjewadi, Pune",
     metaDescription:
-      "Modular workstations, office chairs and meeting-room furniture for IT offices in Hinjewadi, made in Pune by Tekton Interior Solutions and installed on site.",
+      "Modular workstations, office chairs and meeting-room furniture for IT offices in Hinjewadi, made in Pune by Tekton and installed on site.",
     answer:
       "Tekton Interior Solutions supplies and installs office furniture in Hinjewadi from its factory in Kondhwa Budruk, Pune. Most Hinjewadi orders are for IT and services offices: modular workstations in quantity, mesh workstation chairs, meeting tables and storage.",
     context:
@@ -54,7 +54,7 @@ export const areas: Area[] = [
     name: "Kharadi",
     title: "Office and Home Furniture Maker for Kharadi, Pune",
     metaDescription:
-      "Office workstations and chairs for Kharadi's IT offices, and modular wardrobes and kitchens for Kharadi apartments, made in Pune by Tekton Interior Solutions.",
+      "Office workstations and chairs for Kharadi's IT offices, and modular wardrobes and kitchens for Kharadi apartments, made in Pune by Tekton.",
     answer:
       "Tekton Interior Solutions makes furniture in Pune for both offices and homes in Kharadi: workstations, chairs and meeting tables for IT and co-working offices, and made-to-measure wardrobes and kitchens for apartments.",
     context:
@@ -86,7 +86,7 @@ export const areas: Area[] = [
     name: "Chakan",
     title: "Office and Canteen Furniture for Chakan MIDC, Pune",
     metaDescription:
-      "Furniture for plant offices in Chakan MIDC: workstations, supervisor tables, canteen tables and chairs, lockers and storage, made in Pune by Tekton Interior Solutions.",
+      "Furniture for plant offices in Chakan MIDC: workstations, supervisor tables, canteen tables and chairs, lockers and storage, made in Pune by Tekton.",
     answer:
       "Tekton Interior Solutions makes furniture for factories and plant offices in Chakan: office workstations, supervisor and executive tables, canteen tables and chairs, staff lockers and storage, delivered and installed from its Pune factory.",
     context:
@@ -118,7 +118,7 @@ export const areas: Area[] = [
     name: "Baner",
     title: "Office and Home Furniture Maker for Baner, Pune",
     metaDescription:
-      "Furniture for start-up offices and apartments in Baner and Balewadi: workstations, chairs, wardrobes and kitchens made in Pune by Tekton Interior Solutions.",
+      "Furniture for start-up offices and apartments in Baner and Balewadi: workstations, chairs, wardrobes and kitchens made in Pune by Tekton.",
     answer:
       "Tekton Interior Solutions makes furniture in Pune for small and mid-size offices and for homes in Baner and Balewadi: compact workstations, meeting tables and chairs for offices, and modular wardrobes, kitchens and beds for apartments.",
     context:
@@ -150,7 +150,7 @@ export const areas: Area[] = [
     name: "Magarpatta and Hadapsar",
     title: "Furniture Manufacturer for Magarpatta and Hadapsar, Pune",
     metaDescription:
-      "Office furniture for Magarpatta Cybercity and Hadapsar, and wardrobes, kitchens and beds for nearby homes, made by Tekton Interior Solutions in Kondhwa Budruk, Pune.",
+      "Office furniture for Magarpatta Cybercity and Hadapsar, and wardrobes, kitchens and beds for nearby homes, made by Tekton in Kondhwa Budruk, Pune.",
     answer:
       "Tekton Interior Solutions makes office and home furniture for Magarpatta, Hadapsar and Amanora from its factory in Kondhwa Budruk, which is in the same south-east side of Pune. It supplies workstations and chairs to offices and wardrobes, kitchens and beds to homes.",
     context:
@@ -182,7 +182,7 @@ export const areas: Area[] = [
     name: "Kondhwa",
     title: "Furniture Manufacturer in Kondhwa, Pune",
     metaDescription:
-      "Tekton Interior Solutions makes office and home furniture at its own factory in Kondhwa Budruk, Pune: workstations, chairs, wardrobes, kitchens and beds, made to measure.",
+      "Tekton makes office and home furniture at its own factory in Kondhwa Budruk, Pune: workstations, chairs, wardrobes, kitchens and beds, made to measure.",
     answer:
       "Tekton Interior Solutions is a furniture manufacturer in Kondhwa, Pune. Its factory is at Plot 101, near D-Mart, Somji, Kondhwa Budruk, where it makes office workstations, chairs, tables and storage, and wardrobes, kitchens and beds for homes.",
     context:
@@ -214,7 +214,7 @@ export const areas: Area[] = [
     name: "NIBM Road and Undri",
     title: "Modular Wardrobes and Kitchens for NIBM Road and Undri",
     metaDescription:
-      "Made-to-measure modular wardrobes, kitchens and beds for apartments on NIBM Road, Undri and Mohammedwadi, made nearby in Kondhwa Budruk by Tekton Interior Solutions.",
+      "Made-to-measure modular wardrobes, kitchens and beds for apartments on NIBM Road, Undri and Mohammedwadi, made nearby in Kondhwa Budruk by Tekton.",
     answer:
       "Tekton Interior Solutions makes modular wardrobes, kitchens and beds for homes on NIBM Road, Undri and Mohammedwadi. The furniture is made to measure at its factory in neighbouring Kondhwa Budruk and installed by its own team.",
     context:
@@ -246,7 +246,7 @@ export const areas: Area[] = [
     name: "Wakad",
     title: "Home and Office Furniture Maker for Wakad, Pune",
     metaDescription:
-      "Modular wardrobes, kitchens and beds for Wakad apartments, and workstations and chairs for small offices, made in Pune by Tekton Interior Solutions and installed on site.",
+      "Modular wardrobes, kitchens and beds for Wakad apartments, and workstations and chairs for small offices, made in Pune by Tekton and installed on site.",
     answer:
       "Tekton Interior Solutions makes furniture in Pune for homes and offices in Wakad: made-to-measure wardrobes, kitchens and beds for apartments, and workstations, chairs and tables for small offices and co-working floors.",
     context:
@@ -278,7 +278,7 @@ export const areas: Area[] = [
     name: "Pimpri-Chinchwad",
     title: "Office Furniture Manufacturer for Pimpri-Chinchwad",
     metaDescription:
-      "Office workstations, chairs, tables, storage and canteen furniture for factories and offices in Pimpri, Chinchwad and Bhosari, made in Pune by Tekton Interior Solutions.",
+      "Office workstations, chairs, tables, storage and canteen furniture for factories and offices in Pimpri, Chinchwad and Bhosari, made in Pune by Tekton.",
     answer:
       "Tekton Interior Solutions supplies and installs office furniture across Pimpri-Chinchwad: workstations, chairs, tables and storage for plant offices and company offices, and canteen furniture for staff cafeterias. It is made at Tekton's own factory in Pune.",
     context:
@@ -310,7 +310,7 @@ export const areas: Area[] = [
     name: "Viman Nagar",
     title: "Office and Home Furniture Maker for Viman Nagar, Pune",
     metaDescription:
-      "Workstations, chairs and reception furniture for offices in Viman Nagar, and modular wardrobes and kitchens for apartments, made in Pune by Tekton Interior Solutions.",
+      "Workstations, chairs and reception furniture for offices in Viman Nagar, and modular wardrobes and kitchens for apartments, made in Pune by Tekton.",
     answer:
       "Tekton Interior Solutions makes furniture in Pune for offices and homes in Viman Nagar: workstations, chairs, reception and meeting-room furniture for commercial offices, and made-to-measure wardrobes and kitchens for apartments.",
     context:
@@ -342,7 +342,7 @@ export const areas: Area[] = [
     name: "Kalyani Nagar",
     title: "Made-to-Measure Furniture for Kalyani Nagar, Pune",
     metaDescription:
-      "Modular wardrobes, kitchens and beds for Kalyani Nagar homes, and executive tables, conference tables and reception furniture for its offices, made in Pune by Tekton.",
+      "Modular wardrobes, kitchens and beds for Kalyani Nagar homes, and executive, conference and reception tables for its offices, made in Pune by Tekton.",
     answer:
       "Tekton Interior Solutions makes made-to-measure furniture for Kalyani Nagar: modular wardrobes, kitchens and beds for apartments and bungalows, and executive tables, conference tables and reception furniture for its commercial offices.",
     context:
@@ -374,7 +374,7 @@ export const areas: Area[] = [
     name: "Wagholi",
     title: "Modular Home Furniture Maker for Wagholi, Pune",
     metaDescription:
-      "Modular wardrobes, kitchens and beds for new flats in Wagholi, and office furniture for nearby offices and institutes, made in Pune by Tekton Interior Solutions.",
+      "Modular wardrobes, kitchens and beds for new flats in Wagholi, and office furniture for nearby offices and institutes, made in Pune by Tekton.",
     answer:
       "Tekton Interior Solutions makes modular wardrobes, kitchens and beds for new homes in Wagholi, and office and institutional furniture for the offices, warehouses and colleges around it. Everything is made to measure at Tekton's factory in Pune.",
     context:

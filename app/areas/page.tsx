@@ -10,7 +10,7 @@ import { formatAddress, site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Areas We Serve in Pune",
   description:
-    "Tekton delivers and installs office and home furniture across Pune from its Kondhwa Budruk factory: Kondhwa, Hinjewadi, Kharadi, Wakad, Viman Nagar, Pimpri-Chinchwad and more.",
+    "Tekton delivers and installs office and home furniture across Pune from its Kondhwa Budruk factory: Hinjewadi, Kharadi, Wakad, Viman Nagar and more.",
   alternates: { canonical: "/areas" },
 };
 

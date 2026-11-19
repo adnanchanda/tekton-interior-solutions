@@ -9,7 +9,7 @@ import { breadcrumbSchema, faqSchema } from "@/lib/schema";
 export const metadata: Metadata = {
   title: "Furniture FAQ: Materials, Sizes, Ordering",
   description:
-    "Answers from a Pune furniture manufacturer: MDF or particle board, HDHMR, plywood grades, standard sizes, how to get a quote and whether installation is included.",
+    "Answers from a Pune furniture manufacturer: MDF or particle board, HDHMR, plywood grades, standard sizes, getting a quote and whether installation is included.",
   alternates: { canonical: "/faq" },
 };
 

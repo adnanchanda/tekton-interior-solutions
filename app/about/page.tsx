@@ -9,7 +9,7 @@ import { clients, formatAddress, site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "About Us: Furniture Manufacturer in Pune since 2017",
   description:
-    "Tekton Interior Solutions has made office and home furniture in Kondhwa Budruk, Pune since May 2017. It began with office seating and now makes complete office fit-outs.",
+    "Tekton has made office and home furniture in Kondhwa Budruk, Pune since May 2017. It began with office seating and now fits out whole offices.",
   alternates: { canonical: "/about" },
 };
 

@@ -36,7 +36,7 @@ export const products: Product[] = [
     scene: "workstation",
     title: "Modular Office Workstation Manufacturer in Pune",
     metaDescription:
-      "Tekton makes and installs modular office workstations in Pune: linear, L-shape and cluster desks with screens, pedestals and cable management. Factory in Kondhwa Budruk.",
+      "Tekton makes and installs modular office workstations in Pune: linear, L-shape and cluster desks with screens, pedestals and cable management.",
     answer:
       "Tekton Interior Solutions manufactures modular office workstations at its factory in Kondhwa Budruk, Pune and installs them on site. Workstations are made to your seat count and floor plan: linear benches, face-to-face clusters, L-shape desks and cubicles, with partition screens, pedestals and cable management built in.",
     range: [
@@ -245,7 +245,7 @@ export const products: Product[] = [
     scene: "cafeteria",
     title: "Cafeteria Furniture Manufacturer in Pune",
     metaDescription:
-      "Cafeteria tables, cafeteria chairs, bar stools and benches for office canteens and breakout areas, made in Pune by Tekton Interior Solutions.",
+      "Cafeteria tables, cafeteria chairs, bar stools and benches for office canteens and breakout areas, made in Pune by Tekton.",
     answer:
       "Tekton Interior Solutions makes furniture for office cafeterias, canteens and breakout areas in Pune: cafeteria tables, cafeteria chairs, bar stools and benches, built for heavy daily use and easy cleaning.",
     range: [
@@ -333,7 +333,7 @@ export const products: Product[] = [
     scene: "wardrobe",
     title: "Modular Wardrobe Manufacturer in Pune",
     metaDescription:
-      "Made-to-measure modular wardrobes from a Pune factory: hinged and sliding wardrobes with lofts, drawers and your choice of laminate, by Tekton Interior Solutions.",
+      "Made-to-measure modular wardrobes from a Pune factory: hinged and sliding wardrobes with lofts, drawers and your choice of laminate, by Tekton.",
     answer:
       "Tekton Interior Solutions makes modular wardrobes to measure at its factory in Kondhwa Budruk, Pune. Because the wardrobe is cut and edge-banded in the factory and only assembled at your home, installation is quick and clean. Hinged or sliding shutters, lofts, drawers and internal layouts are made to your wall and your storage.",
     range: [
