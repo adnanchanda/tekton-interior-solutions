@@ -408,6 +408,13 @@ a.panel:focus-visible {
   color: var(--muted);
 }
 
+/* The price sits bottom left so it never shares a spot with the part label. */
+.part--price {
+  right: auto;
+  left: 12px;
+  color: var(--ink);
+}
+
 /* ---------- isometric drawings ---------- */
 
 .iso {

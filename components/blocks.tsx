@@ -97,7 +97,7 @@ export function ProductPanel({ p }: { p: Product }) {
       <span className="part">
         {p.part} · {p.size}
       </span>
-      <span className="part">{priceText(p).replace(/^from/, "From")}</span>
+      <span className="part part--price">{priceText(p).replace(/^from/, "From")}</span>
     </Link>
   );
 }
