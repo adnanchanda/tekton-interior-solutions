@@ -1,12 +1,11 @@
 import type { Faq } from "./products";
-import { officeProducts, priceLabel } from "./products";
 import { clients, site } from "./site";
 
 // Content for the office-only landing page. It gathers what the six office
 // product pages say into one page for buyers searching for an office
 // furniture manufacturer. Every statement here is already on another page of
-// the site. Starting prices come from lib/products.ts. Lead times, warranty
-// and project case studies are left out until the owner supplies them.
+// the site. Prices, lead times, warranty and project case studies are left
+// out until the owner supplies them.
 export const office = {
   path: "/office-furniture-manufacturer-pune",
   name: "Office furniture manufacturer",
@@ -60,10 +59,6 @@ export const office = {
     },
   ],
   faqs: [
-    {
-      q: "What does office furniture cost in Pune?",
-      a: `At ${site.name} in Pune, starting prices are: ${officeProducts.map((p) => `${p.name.toLowerCase()} from ${priceLabel(p)}`).join("; ")}. The quote for your office depends on the size, board, finish, hardware and quantity.`,
-    },
     {
       q: "Who manufactures office furniture in Pune?",
       a: `${site.name} manufactures office furniture in Pune at its own factory in Kondhwa Budruk. It makes modular workstations, office chairs, executive, conference and reception tables, storage units, cafeteria furniture and office sofas, and installs them on site.`,

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { priceText, type Faq, type Product } from "@/lib/products";
+import type { Faq, Product } from "@/lib/products";
 import { formatAddress, site, whatsappLink } from "@/lib/site";
 import IsoDrawing from "./iso/IsoDrawing";
 import type { SceneKey } from "./iso/scenes";
@@ -97,7 +97,6 @@ export function ProductPanel({ p }: { p: Product }) {
       <span className="part">
         {p.part} · {p.size}
       </span>
-      <span className="part part--price">{priceText(p).replace(/^from/, "From")}</span>
     </Link>
   );
 }

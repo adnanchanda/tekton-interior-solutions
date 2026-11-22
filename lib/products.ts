@@ -4,7 +4,6 @@ export type Faq = { q: string; a: string };
 
 export type Product = {
   slug: string;
-  priceFrom: { amount: number; max?: number; unit?: string }; // starting price in rupees, or a range when max is set
   name: string;
   short: string;
   group: "office" | "home";
@@ -21,13 +20,10 @@ export type Product = {
 };
 
 // Sizes below are the common Indian market sizes for each product type.
-// They are guidance for buyers, not a Tekton stock list.
-// Starting prices (priceFrom) were supplied by the owner's family in
-// November 2026. Never change or add a price without a figure from them.
+// They are guidance for buyers, not a Tekton price list or stock list.
 export const products: Product[] = [
   {
     slug: "modular-office-workstations",
-    priceFrom: { amount: 6000 },
     name: "Modular office workstations",
     short: "Workstations",
     group: "office",
@@ -82,7 +78,6 @@ export const products: Product[] = [
   },
   {
     slug: "office-chairs",
-    priceFrom: { amount: 2000 },
     name: "Office chairs",
     short: "Office chairs",
     group: "office",
@@ -137,7 +132,6 @@ export const products: Product[] = [
   },
   {
     slug: "office-tables",
-    priceFrom: { amount: 8000 },
     name: "Executive, conference and reception tables",
     short: "Office tables",
     group: "office",
@@ -190,7 +184,6 @@ export const products: Product[] = [
   },
   {
     slug: "office-storage",
-    priceFrom: { amount: 3000 },
     name: "Office storage units",
     short: "Storage",
     group: "office",
@@ -236,7 +229,6 @@ export const products: Product[] = [
   },
   {
     slug: "cafeteria-furniture",
-    priceFrom: { amount: 10000 },
     name: "Cafeteria and breakout furniture",
     short: "Cafeteria",
     group: "office",
@@ -281,7 +273,6 @@ export const products: Product[] = [
   },
   {
     slug: "reception-lounge-sofas",
-    priceFrom: { amount: 15000 },
     name: "Waiting lounges and office sofas",
     short: "Lounge and sofas",
     group: "office",
@@ -324,7 +315,6 @@ export const products: Product[] = [
   },
   {
     slug: "modular-wardrobes",
-    priceFrom: { amount: 700, unit: "per sq ft" },
     name: "Modular wardrobes",
     short: "Wardrobes",
     group: "home",
@@ -377,7 +367,6 @@ export const products: Product[] = [
   },
   {
     slug: "modular-kitchens",
-    priceFrom: { amount: 1200, max: 2500, unit: "per sq ft" },
     name: "Modular kitchens",
     short: "Kitchens",
     group: "home",
@@ -431,7 +420,6 @@ export const products: Product[] = [
   },
   {
     slug: "beds-and-bedroom-furniture",
-    priceFrom: { amount: 15000, max: 20000 },
     name: "Beds and bedroom furniture",
     short: "Beds",
     group: "home",
@@ -483,24 +471,3 @@ export const products: Product[] = [
 export const getProduct = (slug: string) => products.find((p) => p.slug === slug);
 export const officeProducts = products.filter((p) => p.group === "office");
 export const homeProducts = products.filter((p) => p.group === "home");
-
-const rupees = (n: number) => `₹${n.toLocaleString("en-IN")}`;
-
-/** "₹6,000", "₹700 per sq ft" or "₹1,200 to ₹2,500 per sq ft". */
-export const priceLabel = (p: Product) =>
-  `${rupees(p.priceFrom.amount)}${p.priceFrom.max ? ` to ${rupees(p.priceFrom.max)}` : ""}${p.priceFrom.unit ? ` ${p.priceFrom.unit}` : ""}`;
-
-/** "from ₹6,000" for a starting price, "₹15,000 to ₹20,000" for a range. */
-export const priceText = (p: Product) => (p.priceFrom.max ? priceLabel(p) : `from ${priceLabel(p)}`);
-
-/** "The starting price for office chairs is ₹2,000" or "The price of modular kitchens is ₹1,200 to ₹2,500 per sq ft". */
-export const priceSentence = (p: Product) =>
-  `${p.priceFrom.max ? "The price of" : "The starting price for"} ${p.name.toLowerCase()} is ${priceLabel(p)}`;
-
-export const priceNote =
-  "Prices as of November 2026. The quote for your order depends on the size, board, finish, hardware and quantity.";
-
-export const priceFaq = (p: Product): Faq => ({
-  q: `What is the ${p.priceFrom.max ? "price" : "starting price"} of ${p.name.toLowerCase()} at Tekton?`,
-  a: `${priceSentence(p)} at Tekton Interior Solutions in Pune. The quote for your order depends on the size, board, finish, hardware and quantity.`,
-});
